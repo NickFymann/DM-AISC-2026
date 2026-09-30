@@ -1,0 +1,323 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{balance}
+\usepackage{url}
+\usepackage{microtype}
+
+\newcommand{\CN}{\mathcal{CN}}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\herm}{\mathrm{H}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\argmin}{\operatorname*{arg\,min}}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+\bstctlcite{BSTcontrol}
+
+\title{Correlation-Pruned Fixed-Noise Sparse Bayesian Learning for Passive Intermodulation Cancellation}
+
+\author{\IEEEauthorblockN{Anonymous Authors}}
+
+\maketitle
+
+\begin{abstract}
+Passive intermodulation (PIM) cancellation with Volterra-type models can require a large and strongly correlated set of nonlinear basis functions. We present a two-stage canceller that first screens normalized monomials by their absolute correlation with the observed PIM waveform and then estimates the surviving coefficients by fixed-noise sparse Bayesian learning (SBL). The likelihood precision is held constant within each run, while coefficient precisions are updated and irrelevant terms are pruned. The method is evaluated in two complementary settings. A primary cubic experiment matches the nonlinear order of the dictionary while the finite causal memory is swept; at the displayed setting $M=6$, the iteration-capped SBL run reaches 51.3 dB cancellation versus 50.7 dB for the implemented ridge-regularized least-squares baseline (LS), while retaining seven of 126 cubic terms. A second set of experiments uses a phase-preserving hyperbolic-tangent soft saturation, which provides a bounded non-polynomial source with cubic, quintic, and higher odd-order components. For this source, cubic SBL reaches 24.4 dB at $M=4$ versus 22.3 dB for LS. With a combined cubic--quintic dictionary, SBL reaches 29.8 dB on clean PIM using 17 active terms out of 4788 candidates, while LS reaches 29.9 dB. With additive white Gaussian noise 35 dB below PIM, SBL reaches 28.8 dB observed cancellation with 22 active terms. The results distinguish cubic order matching under finite-memory truncation from nonlinear-order mismatch and show that the combined correlation screening and relevance pruning are especially effective for the higher-order dictionary.
+\end{abstract}
+
+\begin{IEEEkeywords}
+passive intermodulation, digital cancellation, sparse Bayesian learning, Volterra model, basis-function pruning, nonlinear system identification
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{sec:intro}
+Passive intermodulation is produced when strong transmitted signals excite weak nonlinearities in nominally passive structures. In frequency-division-duplex (FDD) radios, intermodulation products generated after the duplexer can fall into the receiver band and desensitize the receive chain. The nonlinear source may be located in connectors, filters, antennas, imperfect contacts, or an external metallic object illuminated by the transmitter; the latter mechanism is commonly called air-induced PIM \cite{Lui1990PIM,Lampu2021AirInduced,Lampu2023Algorithms}. Carrier aggregation and multiple-input multiple-output operation increase the number of simultaneously active transmit components and therefore enlarge the set of potentially harmful products \cite{Ahmmed2023Overview}.
+
+Digital cancellation estimates the PIM waveform from known transmit samples and subtracts the estimate from the received signal. Polynomial, memory-polynomial, generalized memory-polynomial, and Volterra-type behavioral models are natural choices because they represent odd-order intermodulation while remaining linear in their coefficients \cite{Schetzen1980Volterra,Morgan2006GMP,Waheed2020PIM}. Measurement studies also show that passive structures can generate measurable products beyond third order \cite{Christianson2008HigherOrder}, while connector-level PIM can be predicted through a nonlinear behavioral description of the microwave network \cite{Henrie2008Prediction}. These observations motivate dictionaries that are richer than a single memoryless cubic term.
+
+The difficulty is dimensionality. Complete basis-function models can provide substantial cancellation, but the number of coefficients and the estimation cost grow rapidly with memory depth, nonlinear order, carrier count, and antenna count \cite{Lampu2021AirInduced,Lampu2023Algorithms}. Physics-assisted and cascaded structures reduce this burden \cite{Lampu2023Cascade}, although the appropriate reduced structure depends on the source and propagation geometry. We study a complementary route: a broad candidate dictionary is retained, but a sparse subset is inferred from the observed waveform.
+
+The proposed procedure combines deterministic correlation screening with automatic relevance determination through SBL \cite{Tipping2001SBL,Wipf2004SBL}. The screen rejects normalized basis functions having negligible inner product with the target. SBL then places an independent precision hyperparameter on every retained coefficient; large precisions shrink coefficients toward zero and supply an iterative pruning rule.
+
+Our contributions are fourfold. First, we formulate correlation-pruned fixed-noise SBL for complex PIM regression. Second, we evaluate the method first on the original cubic source and then on a phase-preserving tanh saturation, separating an order-matched nonlinear baseline from a deliberate nonlinear-order-mismatch test. Third, we apply the same inference machinery to symmetry-reduced cubic and combined cubic--quintic dictionaries. Fourth, we compare the implemented full-dictionary ridge-LS baseline and SBL over complete sweeps of memory and fixed precision using five supplied result tables and five spectral plots, including clean and noisy tanh cases. The results show that the cubic target can be represented by a very small active set, whereas fifth-order terms become important for the saturating source.
+
+The remainder of this paper is organized as follows. Section \ref{sec:model} defines the Volterra-type regression model used for PIM synthesis and cancellation, and describes the dense ridge-regularized least-squares baseline. Section \ref{sec:method} presents the proposed two-stage sparse estimation procedure, consisting of correlation-based screening and fixed-noise sparse Bayesian learning with relevance pruning. Section \ref{sec:setup} describes the experimental rationale, including the cubic order-matched source, the phase-preserving hyperbolic tangent saturation model, and the combined cubic-quintic dictionary. Section \ref{sec:results} reports the numerical results for both clean and noisy observations across the tested memory depths and fixed precision settings. Section \ref{sec:discussion} discusses the trade-offs between cancellation depth, model sparsity, and convergence behavior. Finally, Section \ref{sec:concl} concludes the paper and outlines directions for future work.
+
+The source code for the proposed method and the baseline comparisons is provided at \url{https://github.com/AnonymousTable/DM-AISC-2026}.
+\section{PIM Regression Model}
+\label{sec:model}
+\subsection{Two-Carrier Complex-Baseband Model}
+Let $x_{\ell}[n]$ and $x_h[n]$ denote the known low- and high-frequency complex-baseband transmit-side reference components, and let $y[n]$ denote the extracted PIM observation in the receiver band corresponding to $2f_{\ell}-f_h$. A behavioral canceller represents the target as
+\begin{equation}
+  \mat y=\mat X_{\mathrm{full}}\mat w+\mat e,
+  \label{eq:linear-model}
+\end{equation}
+where $\mat X_{\mathrm{full}}$ is assembled from delayed nonlinear monomials, $\mat w$ is the coefficient vector, and $\mat e$ contains modeling error and, in the noisy experiments, additive noise. Although the mapping from transmit samples to PIM is nonlinear, \eqref{eq:linear-model} is linear in $\mat w$. %In the supplied notebooks, the monomials are formed from the available transmit-side references rather than from oracle signals at the nonlinear source.
+In the implementation, the monomials are formed from the available transmit-side references rather than from oracle signals at the nonlinear source.
+Each raw monomial $\phi_i[n]$ is passed through the same known receiver low-pass filter used to isolate the selected PIM band,
+\begin{equation}
+ x_i[n]=(h_{\mathrm{rx}}*\phi_i)[n],
+ \label{eq:filtered-column}
+\end{equation}
+and the filtered sequences form the columns of $\mat X_{\mathrm{full}}$. The causal memory terms therefore also represent the pre-nonlinearity linear-path dependence seen from the transmitter references.
+
+For a causal delay set $\mathcal D$ of cardinality $M$, the cubic candidates that fall at $2f_{\ell}-f_h$ are
+\begin{equation}
+ \phi^{(3)}_{a,b,c}[n]
+ =x_{\ell}[n-a]x_{\ell}[n-b]\overline{x_h[n-c]},
+ \quad a\leq b,\quad a,b,c\in\mathcal D.
+ \label{eq:cubic}
+\end{equation}
+The ordering $a\leq b$ removes permutation duplicates, so the number of distinct cubic columns is
+\begin{equation}
+ N_3(M)=\binom{M+1}{2}M=\frac{M^2(M+1)}{2}.
+ \label{eq:n3}
+\end{equation}
+Thus $N_3=6,40,126,$ and $288$ for $M=2,4,6,$ and $8$.
+
+The combined dictionary adds two fifth-order families that land in the same PIM band:
+\begin{align}
+ \phi^{(5a)}[n]&=x_{\ell,a}x_{\ell,b}x_{\ell,c}
+                 \overline{x_{\ell,d}}\,\overline{x_{h,e}},
+                 \quad a\leq b\leq c, \label{eq:im5a}\\
+ \phi^{(5b)}[n]&=x_{\ell,a}x_{\ell,b}x_{h,c}
+                 \overline{x_{h,d}}\,\overline{x_{h,e}},
+                 \quad a\leq b,\ d\leq e, \label{eq:im5b}
+\end{align}
+where $x_{q,a}$ abbreviates $x_q[n-a]$. The symmetry-reduced candidate count is
+\begin{equation}
+\begin{split}
+ N_{3+5}(M)={}&\binom{M+1}{2}M
+ +\binom{M+2}{3}M^2\\
+ &+\binom{M+1}{2}^{\!2}M,
+\end{split}
+\label{eq:n35}
+\end{equation}
+which gives 40, 760, 4788, and 18336 columns for $M=2,4,6,$ and $8$, respectively. These values describe the full symmetry-reduced candidate pool before correlation screening and Bayesian pruning; they are used only in the complexity and sparsity comparisons below. For clarity, $M$ denotes the number of causal taps per signal, rather than the half-width of a two-sided delay grid. The ordering restrictions remove algebraically duplicate columns without changing the span of the candidate model.
+
+\subsection{Dense Ridge-Regularized Least-Squares Reference}
+%For every memory/order configuration, the notebook baseline fits the full symmetry-reduced dictionary and is not subjected to correlation screening.
+For every memory/order configuration, the reference estimator fits the full symmetry-reduced dictionary and is not subjected to correlation screening.
+Let $\mat X_f\in\mathbb C^{N_f\times P}$ and $\mat y_f$ denote the fitting samples. The implementation forms
+\begin{align}
+ \mat R&=\frac{\mat X_f^{\herm}\mat X_f}{N_f},\qquad
+ \mat r=\frac{\mat X_f^{\herm}\mat y_f}{N_f}, \label{eq:ls-stats}\\
+ \lambda_X&=\rho\,\frac{\operatorname{tr}(\mat R)}{P},\qquad
+ \rho=10^{-4}, \label{eq:ls-lambda}
+\end{align}
+and computes
+\begin{equation}
+\begin{split}
+ \widehat{\mat w}_{\mathrm{LS}}
+ &=\left(\mat R+\lambda_X\mat I\right)^{-1}\mat r\\
+ &=\argmin_{\mat w}\left\{
+ \frac{1}{N_f}\|\mat y_f-\mat X_f\mat w\|_2^2
+ +\lambda_X\|\mat w\|_2^2\right\}.
+\end{split}
+\label{eq:ls}
+\end{equation}
+Thus, $10^{-4}$ is a relative ridge factor, whereas the actual penalty $\lambda_X$ is scaled by the mean diagonal level of the sample covariance. %When $P>N_f$, the fifth-order notebooks evaluate the algebraically equivalent dual form, avoiding a $P\times P$ solve without changing the estimator. 
+When $P>N_f$, the fifth-order implementation evaluates the algebraically equivalent dual form, avoiding a $P\times P$ solve without changing the estimator.
+Ridge stabilization improves conditioning and shrinks all coefficients, but it does not select an exactly sparse support. Throughout the tables and supplied plot legends, the short label ``LS'' denotes this dense ridge-regularized baseline.
+
+\section{Correlation-Pruned Fixed-Noise SBL}
+\label{sec:method}
+\subsection{Normalized Correlation Screening}
+Let $\mat y_f$ and $\mat x_{i,f}$ denote the fitting-sample target and the fitting-sample restriction of column $i$ of $\mat X_{\mathrm{full}}$. The target and each nonzero column are normalized as
+\begin{equation}
+ \bar{\mat y}_f=\frac{\mat y_f}{\|\mat y_f\|_2},\qquad
+ \bar{\mat x}_{i,f}=\frac{\mat x_{i,f}}{\|\mat x_{i,f}\|_2}.
+ \label{eq:normalize}
+\end{equation}
+Each candidate receives the score
+\begin{equation}
+ R_i=\left|\bar{\mat y}_f^{\herm}\bar{\mat x}_{i,f}\right|.
+ \label{eq:corr}
+\end{equation}
+Given a threshold $\eta$, the one-shot screened set is
+\begin{equation}
+ \mathcal S_{\eta}=\{i:R_i>\eta\}.
+ \label{eq:screen}
+\end{equation}
+The implementation retains the normalized screened matrix $\bar{\mat X}_f=[\bar{\mat x}_{i,f}]_{i\in\mathcal S_{\eta}}$ for the subsequent SBL iterations, rather than reverting to the original column scales. In the reported runs, optional forced top-$K$ retention is disabled and at least one candidate must remain; if the threshold rejects every nonzero column, the single highest-scoring column is retained. Normalization makes both the screen and the Bayesian updates invariant to individual column scale and prevents the SBL matrix operations from being spent on negligible candidates.
+
+\subsection{Fixed-Noise Bayesian Model}
+The normalized screened regression is assigned a complex Gaussian likelihood and independent coefficient prior,
+\begin{align}
+ p(\bar{\mat y}_f\mid\mat v,\beta)
+   &=\CN(\bar{\mat X}_f\mat v,\beta^{-1}\mat I), \\
+ p(\mat v\mid\vect\alpha)
+   &=\CN(\mat 0,\mat A^{-1}),\qquad
+     \mat A=\diag(\alpha_1,\ldots,\alpha_K).
+ \label{eq:priors}
+\end{align}
+Here $\alpha_i$ is a coefficient precision: a large value means a small prior variance and therefore an irrelevant basis function. The likelihood precision $\beta$ is held constant inside one SBL run. Because the fitting target and dictionary columns are normalized, $\beta$ is an algorithmic precision in normalized coordinates; it is not estimated from the physical AWGN level. A single run therefore corresponds to one chosen value of $\beta$; the experiments repeat the same solver at $\beta\in\{10^2,10^4,10^6\}$, but $\beta$ is never updated by the SBL recursion. No random samples are added to clean data merely to execute the algorithm. This external precision sweep is distinct from the experiment in which AWGN is physically added to the observation.
+
+For fixed $\vect\alpha$ and $\beta$, the posterior covariance and mean in normalized coordinates are
+\begin{align}
+ \mat\Sigma&=\left(\beta\bar{\mat X}_f^{\herm}\bar{\mat X}_f+\mat A\right)^{-1},
+ \label{eq:sigma}\\
+ \vect\mu&=\beta\mat\Sigma\bar{\mat X}_f^{\herm}\bar{\mat y}_f.
+ \label{eq:mu}
+\end{align}
+The effective degree of freedom and precision update are
+\begin{align}
+ \gamma_i&=1-\alpha_i\operatorname{Re}\{\Sigma_{ii}\}, \label{eq:gamma}\\
+ \alpha_i^{\mathrm{new}}&=\frac{\gamma_i}{|\mu_i|^2}. \label{eq:alpha-update}
+\end{align}
+Numerically, the implementation clips $\gamma_i$ to $[\varepsilon,1]$, adds $\varepsilon$ to the denominator in \eqref{eq:alpha-update}, and clips the resulting precision to a finite range. Non-finite values or values above $\alpha_{\max}$ are removed; if every candidate would be removed, the candidate with the smallest updated precision is retained. Because $\vect\mu$ refers to normalized columns and a normalized target, the surviving coefficients are returned to the original dictionary scale. If $c_y=\|\mat y_f\|_2$ and $c_i=\|\mat x_{i,f}\|_2$ are the fitting-sample norms, then
+\begin{equation}
+ \widehat w_i=\frac{c_y}{c_i}\mu_i,\qquad
+ \widehat{\mat p}=\mat X_{\mathrm{full}}[:,\mathcal A]
+ \widehat{\mat w}_{\mathcal A},\qquad
+ \mat r=\mat y-\widehat{\mat p}.
+ \label{eq:estimate}
+\end{equation}
+
+\begin{figure}[!t]
+\centering
+\begin{minipage}{0.98\columnwidth}
+\small
+\begin{algorithmic}[1]
+\REQUIRE $\mat y,\mat X_{\mathrm{full}},\eta,\beta,\alpha_{\max},T_{\max}$
+\STATE Compute fitting-sample norms; normalize $\mat y_f$ and all nonzero columns
+\STATE Compute $R_i=|\bar{\mat y}_f^{\herm}\bar{\mat x}_{i,f}|$ and retain $R_i>\eta$; if empty, retain the largest $R_i$
+\STATE Form $\bar{\mat X}_f$ from the normalized retained columns
+\STATE Initialize $\vect\alpha\leftarrow\mat 1$ on the screened dictionary
+\FOR{$t=1,\ldots,T_{\max}$}
+  \STATE Evaluate $\mat\Sigma$ and $\vect\mu$ from \eqref{eq:sigma}--\eqref{eq:mu}
+  \STATE $\gamma_i\leftarrow\operatorname{clip}(1-\alpha_i\operatorname{Re}\{\Sigma_{ii}\})$
+  \STATE $\alpha_i\leftarrow\operatorname{clip}(\gamma_i/(|\mu_i|^2+\varepsilon))$
+  \STATE Remove non-finite or over-threshold precisions; keep one if needed and reset the previous mean after pruning
+  \IF{no pruning occurred and the relative change in $\vect\mu$ is below tolerance}
+    \STATE \textbf{break}
+  \ENDIF
+\ENDFOR
+\STATE Rescale the surviving coefficients according to \eqref{eq:estimate}
+\RETURN $\widehat{\mat p}$ and active basis indices
+\end{algorithmic}
+\end{minipage}
+\caption{%Correlation-pruned fixed-noise SBL as implemented in the reported notebook sweeps. Posterior inference is performed on normalized variables, numerical safeguards are applied to the precision update, and the final coefficients are rescaled before PIM synthesis.
+Correlation-pruned fixed-noise SBL with posterior inference on normalized variables, numerical safeguards in the precision update, and coefficient rescaling before PIM synthesis.}
+\label{fig:algorithm}
+\end{figure}
+
+Algorithm~\ref{fig:algorithm} has two distinct sparsification stages. Correlation screening is performed once, whereas Bayesian pruning is iterative and depends on the evidence updates, fixed $\beta$, and $\alpha_{\max}$. The tables use this one-shot full-screening path.
+%the optional residual-driven batched extension included later in the fifth-order notebooks is outside the comparisons reported here.
+The tables use this one-shot full-screening path; the optional residual-driven batched extension is outside the comparisons reported here.
+\section{Experimental Rationale and Setup}
+\label{sec:setup}
+\subsection{Cubic Order-Matched Experiment}
+The primary experiment is the original standalone configuration, before tanh saturation was introduced. Two transmit bands pass through the same linear path, after which the nonlinear source is a pure phase-preserving cubic law,
+\begin{equation}
+ g_3(s)=G\,s|s|^2.
+ \label{eq:pure-cubic}
+\end{equation}
+The receiver processing extracts the $2f_{\ell}-f_h$ product. Equation~\eqref{eq:pure-cubic} matches the nonlinear order and interaction family represented by \eqref{eq:cubic}. However, the dictionary is built from transmit-side references and the tested causal memory $M$ is finite, so a particular $M$ need not span the complete effective memory of the preceding linear path. The experiment is therefore an order-matched cubic validation, not a claim of exact finite-dimensional representability at every tested memory.
+
+\subsection{Phase-Preserving Tanh Saturation}
+The second source replaces only the nonlinear transformation while retaining the same signal-generation and receiver-processing logic. It is
+\begin{equation}
+ g_{\tanh}(s)=G\,\tanh(\gamma|s|)\frac{s}{|s|+\epsilon},
+ \label{eq:tanh}
+\end{equation}
+where the small $\epsilon$ prevents division by zero. Outside the negligible regularization neighborhood $|s|\approx\epsilon$, the mapping preserves phase and is approximately linear before saturation, while its magnitude approaches a finite limit at large amplitude. It therefore serves as a smooth soft-saturation behavioral model rather than an unbounded polynomial.
+
+The relevance of \eqref{eq:tanh} to the dictionary follows from its odd-power expansion. For $|s|\gg\epsilon$, the numerical denominator can be replaced by $|s|$, giving
+\begin{equation}
+\begin{split}
+ g_{\tanh}(s)=G\bigg(&\gamma s-\frac{\gamma^3}{3}s|s|^2
+ +\frac{2\gamma^5}{15}s|s|^4\\
+ &-\frac{17\gamma^7}{315}s|s|^6+\cdots\bigg).
+\end{split}
+\label{eq:tanh-series}
+\end{equation}
+After receiver-band selection, the linear component is rejected while cubic, quintic, and higher odd-order intermodulation remain. Measured passive components do exhibit higher-order PIM products \cite{Christianson2008HigherOrder}, and connector studies support nonlinear behavioral prediction of PIM in microwave networks \cite{Henrie2008Prediction}. These sources motivate a controlled higher-order experiment, but they do not prescribe tanh as a physical PIM law. Likewise, the low-complexity air-PIM literature represents the memoryless nonlinear block with a spline-interpolated lookup table rather than a fixed tanh function \cite{Lampu2023Cascade}. Accordingly, \eqref{eq:tanh} is used only as a bounded, analytically transparent synthetic surrogate for testing robustness beyond an exactly cubic generator.
+
+\subsection{Compared Configurations}
+The primary source is evaluated with the cubic dictionary. The tanh source is evaluated with both the cubic dictionary and the combined cubic--quintic dictionary, first without added noise and then with AWGN 35 dB below the PIM component. In every sweep, $M\in\{2,4,6,8\}$ and the inner SBL loop uses fixed $\beta\in\{10^2,10^4,10^6\}$, $\alpha_{\max}=10^6$, and an iteration cap of 500. The full-dictionary ridge-LS estimator in \eqref{eq:ls} is the dense reference; the labels in the original numerical records and plots are retained as ``LS.'' The supplied records report test cancellation depth, final active count, iteration count, and a convergence flag. Candidate-pool sizes used in the sparsity ratios follow \eqref{eq:n3} and \eqref{eq:n35}; they are pre-screen counts rather than numbers retained by the correlation stage.
+
+\input{tables.tex}
+
+\section{Results}
+\label{sec:results}
+\subsection{Primary Cubic Source Without Tanh}
+Table~\ref{tab:prime-clean} contains the complete primary sweep. At $\beta=10^2$, the likelihood places too little weight on matching the data in the larger models, and the SBL runs reach the iteration cap for $M=4,6,$ and $8$. Raising the fixed precision improves cancellation and often reduces the retained support. The highest reported SBL value is 51.3 dB at $M=6$, $\beta=10^6$, compared with 50.7 dB for LS at the same memory. Only seven of the 126 cubic candidates remain active, although the run reaches the 500-iteration cap. The best converged SBL point is nearby: 51.0 dB at $M=8$, $\beta=10^6$, with five active terms. Dense ridge-LS reaches 55.8 dB at $M=8$, so the largest-memory case exposes a clear cancellation--complexity tradeoff rather than uniform SBL dominance.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.88\textwidth]{figures/sbl_prime_experiment.png}
+\caption{Primary cubic order-matched experiment without tanh. At the displayed $M=6$ setting, LS reaches 50.7 dB, while fixed-noise SBL with $\beta=10^6$ reaches 51.3 dB using seven active terms.}
+\label{fig:prime}
+\end{figure*}
+
+Fig.~\ref{fig:prime} shows the selected $M=6$ comparison in the frequency domain. Both residuals are far below the clean PIM reference throughout the occupied band, and their similar levels are consistent with the 0.6 dB difference in the tabulated metric. The primary result shows that the algorithm can identify a compact subset for the cubic-order construction before the more demanding saturating source is introduced. The remaining dependence on $M$ is consistent with finite-memory truncation of the pre-nonlinearity path.
+
+\subsection{Tanh Source: Cubic Dictionary}
+For clean tanh data, Table~\ref{tab:cubic-clean} shows a best cubic SBL score of 24.4 dB. At $M=4$, $\beta=10^6$, this exceeds the 22.3 dB LS score by 2.1 dB, but all 40 cubic candidates remain active; the point is selected for cancellation rather than sparsity. More compact operating points occur at $\beta=10^4$: six of 126 terms at $M=6$ reach 24.2 dB, and seven of 288 terms at $M=8$ reach 24.3 dB, within 0.3 and 0.2 dB of the corresponding LS scores.
+
+With AWGN, Table~\ref{tab:cubic-noisy} exhibits the same trend. At $M=4$, $\beta=10^6$, the observed SBL score is 24.0 dB and the PIM-only score is 24.3 dB, versus 22.2 and 22.3 dB for LS. The difference between observed and PIM-only scores is expected because the added noise remains after the modeled PIM component is removed.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.88\textwidth]{figures/tanh_cubic.png}\\[-1mm]
+\includegraphics[width=0.88\textwidth]{figures/tanh_cubic_noisy.png}
+\caption{Cubic modeling of the tanh source. Top: clean PIM, with the displayed $M=4$, $\beta=10^6$ SBL result at 24.4 dB. Bottom: AWGN 35 dB below PIM, where the same setting reaches 24.0 dB on the observation and 24.3 dB on the PIM component.}
+\label{fig:tanh-cubic}
+\end{figure*}
+
+The drop from more than 50 dB in the cubic order-matched experiment to about 24 dB for the tanh source is not an inconsistency: it is the intended effect of nonlinear-order mismatch. Equation~\eqref{eq:tanh-series} contains fifth- and higher-order terms that a cubic dictionary cannot reproduce, even when its memory depth is increased.
+
+\subsection{Tanh Source: Combined Cubic--Quintic Dictionary}
+The higher-order dictionary materially improves the saturation-model fit. Table~\ref{tab:quintic-clean} reports 29.9 dB for LS and up to 29.8 dB for SBL, about 5.4 dB above the best cubic SBL result. At $M=6$, the combined dictionary contains 4788 unique candidates. The $\beta=10^6$ run retains 17 terms and reaches 29.8 dB, so only 0.36\% of the full symmetry-reduced pool remains active. At $M=8$, 23 of 18336 terms remain active and the score is again 29.8 dB.
+
+The noisy results in Table~\ref{tab:quintic-noisy} preserve this compactness. At $M=6$, $\beta=10^6$, LS and SBL both reach 28.8 dB on the observed signal, while SBL retains 22 of 4788 candidates. At $M=4$, SBL reaches 28.6 dB versus 27.4 dB for LS with 30 active terms. At $M=8$, SBL reaches 28.8 dB versus 28.1 dB for LS with 23 active terms.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.91\textwidth]{figures/tanh_quintic.png}\\[-1mm]
+\includegraphics[width=0.91\textwidth]{figures/tanh_quintic_noisy.png}
+\caption{Combined cubic--quintic modeling of the tanh source. Top: clean $M=6$, $\beta=10^6$ result (29.9 dB LS and 29.8 dB SBL with 17 active terms). Bottom: AWGN case, with 28.8 dB observed cancellation for both methods and a 29.9 dB SBL PIM-only score.}
+\label{fig:tanh-quintic}
+\end{figure*}
+
+The clean and noisy spectra in Fig.~\ref{fig:tanh-quintic} nearly overlap at the selected operating point, indicating that the final sparse selection does not visibly degrade the residual relative to dense ridge-LS. The essential difference is dimensionality: a few tens of coefficients reproduce the performance of a dictionary containing thousands of symmetry-reduced candidates.
+
+\section{Discussion}
+\label{sec:discussion}
+\subsection{Cubic Order Matching Versus Saturation Mismatch}
+The two source models answer different questions. The pure cubic experiment matches the nonlinear order of the cubic dictionary and yields residual suppression above 50 dB, while the finite-memory sweep still controls how much of the preceding linear path can be represented. Tanh then introduces a bounded non-polynomial source whose higher odd orders are absent from the cubic dictionary. Its expansion explains why cubic cancellation saturates near 24 dB and why adding fifth-order families recovers approximately 5.4 dB. The comparison therefore separates memory truncation in an order-matched cubic family from deliberate nonlinear-order mismatch.
+
+\subsection{Cancellation, Sparsity, and Fixed Precision}
+The preferred $\beta$ depends on the operating objective. In the tanh cubic experiment, $\beta=10^4$ produces very small models with little loss relative to LS, whereas $\beta=10^6$ yields the highest displayed cancellation but may retain the complete $M=4$ cubic set. In the combined dictionary, $\beta=10^6$ is more consistently favorable: it gives the strongest SBL scores and still leaves only 17--30 active terms for $M=4$--8.
+
+The primary experiment reveals the same tradeoff from another angle. At $M=6$, SBL slightly exceeds the same-memory ridge-LS reference using seven terms but reaches the iteration cap. At $M=8$, a converged five-term SBL model remains close to the $M=6$ result, while dense ridge-LS gains additional cancellation. Thus an implementation should select $\beta$ and memory jointly from validation cancellation, active count, and convergence status rather than from a single maximum.
+
+\subsection{Convergence and Scope}
+A ``No'' flag means that the run reached 500 iterations; it does not imply that its residual is unusable. Nevertheless, the repeated failures at $\beta=10^2$ for larger $M$ show that an excessively low fixed precision can slow stabilization. In the supplied implementations, convergence is declared from the relative change of the normalized posterior mean only after an iteration with no pruning; a pruning event resets that comparison. The code also floors the denominator in the precision update, clips the effective degrees of freedom and precision values, preserves at least one column if every candidate would otherwise be removed, and consistently remaps the active indices. %The fifth-order implementation evaluates the posterior by Cholesky factorization with an inverse fallback, while the smaller cubic notebooks use the direct inverse form in \eqref{eq:sigma}.
+The fifth-order implementation evaluates the posterior by Cholesky factorization with an inverse fallback, while the cubic implementation uses the direct inverse form in \eqref{eq:sigma}.
+
+The experiments establish behavior for the supplied cubic and tanh synthetic sources and the stated AWGN condition. They do not by themselves establish performance for measured air-induced PIM, multiple nonlinear sources, changing propagation channels, or MIMO coupling, and no RF-measurement claim is made here. The literature shows that those scenarios introduce additional channel and source structure \cite{Lampu2023Algorithms,Lampu2023Cascade}. The next validation step is therefore to apply the same sparse inference to measured basis matrices and compare cancellation, cost, and support stability against full and reduced physical models.
+
+\section{Conclusion}\label{sec:concl}
+We presented a two-stage sparse PIM canceller. Normalized correlation first screens a symmetry-reduced cubic or cubic--quintic dictionary. Fixed-noise SBL then operates on the normalized screened variables, updates coefficient precisions, iteratively removes irrelevant terms, and rescales the surviving posterior means to the original dictionary before PIM synthesis. The likelihood precision is fixed within each run and selected by an external sweep; it is not implemented by injecting artificial samples into clean data. The comparison baseline is the full-dictionary, scale-adaptive ridge-LS estimator in \eqref{eq:ls}.
+
+The primary experiment without tanh provides a cubic order-matched baseline: at $M=6$, $\beta=10^6$, SBL reaches 51.3 dB versus 50.7 dB for LS with seven active terms, although the run reaches the iteration cap. The phase-preserving tanh experiment then introduces bounded soft saturation and higher odd-order content. A cubic dictionary reaches 24.4 dB at the selected clean setting, while the combined cubic--quintic model reaches 29.8 dB with 17 active terms out of 4788 candidates, compared with 29.9 dB for LS. With AWGN 35 dB below PIM, SBL reaches 28.8 dB observed cancellation with 22 active terms. These results show both the importance of nonlinear-model order and the ability of correlation screening followed by relevance pruning to produce compact high-order PIM cancellers.
+
+Beyond PIM cancellation, the proposed two-stage strategy, consisting of correlation screening followed by sparse Bayesian learning, can be viewed as a data-driven feature selection method that discovers a compact nonlinear representation from high-dimensional wireless measurements. It provides relevance estimation and uncertainty quantification through the posterior distribution of the coefficients, offering a principled alternative to heuristic pruning. This work thereby aligns with physical-layer-aware data mining, where machine learning and signal processing intersect to enable robust, resource-efficient inference in next-generation wireless systems.
+
+\balance
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

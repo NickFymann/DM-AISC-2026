@@ -1,0 +1,4 @@
+* text=auto
+# Preserve exact bytes of evidence and frozen sources covered by SHA-256 manifests.
+/revision/** -text
+"/experiment description.tex" -text

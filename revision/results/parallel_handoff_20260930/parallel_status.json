@@ -1,0 +1,32 @@
+{
+  "pid": 3854327,
+  "updated_unix": 1790795912.6036587,
+  "elapsed_since_handoff_sec": 102.09567880630493,
+  "completed": 52,
+  "failed": 0,
+  "total": 720,
+  "pending": 665,
+  "max_workers": 3,
+  "available_gib": 12.73611831665039,
+  "stop_reason": null,
+  "active": [
+    {
+      "index": 51,
+      "pid": 3851513,
+      "elapsed_sec": 282.3138449192047,
+      "adopted": true
+    },
+    {
+      "index": 52,
+      "pid": 3854328,
+      "elapsed_sec": 102.09380388259888,
+      "adopted": false
+    },
+    {
+      "index": 54,
+      "pid": 3855007,
+      "elapsed_sec": 62.052098989486694,
+      "adopted": false
+    }
+  ]
+}

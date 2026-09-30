@@ -1,0 +1,49 @@
+{
+  "pid": 3873693,
+  "updated_unix": 1790797317.8145726,
+  "elapsed_since_handoff_sec": 212.2747356891632,
+  "completed": 67,
+  "failed": 0,
+  "total": 720,
+  "pending": 649,
+  "max_workers": 4,
+  "scheduler_version": 2,
+  "physical_core_cpu_slots": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "available_gib": 10.496467590332031,
+  "stop_reason": null,
+  "active": [
+    {
+      "index": 55,
+      "pid": 3858082,
+      "elapsed_sec": 1265.8947687149048,
+      "adopted": true,
+      "cpu_slot": 2
+    },
+    {
+      "index": 57,
+      "pid": 3867254,
+      "elapsed_sec": 639.3547728061676,
+      "adopted": true,
+      "cpu_slot": 4
+    },
+    {
+      "index": 58,
+      "pid": 3875459,
+      "elapsed_sec": 116.13600993156433,
+      "adopted": false,
+      "cpu_slot": 0
+    },
+    {
+      "index": 60,
+      "pid": 3875723,
+      "elapsed_sec": 90.09204435348511,
+      "adopted": false,
+      "cpu_slot": 6
+    }
+  ]
+}

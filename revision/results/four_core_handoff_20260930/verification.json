@@ -1,0 +1,28 @@
+{
+  "scheduler_tests_linux": {
+    "passed": 10,
+    "failed": 0
+  },
+  "preserved_completed_files_verified": 347,
+  "preserved_completed_jobs": 55,
+  "preserved_active_worker_pids": [
+    3851513,
+    3858082,
+    3867254
+  ],
+  "physical_core_cpu_slots": [
+    0,
+    2,
+    4,
+    6
+  ],
+  "four_workers_observed": true,
+  "performance_comparison_valid": false,
+  "snapshot_is_not_live": true,
+  "source_sha256": {
+    "parallel_continue_v2.py": "8d9ec3797794670ef14c3f4551d2753745d3ae413f875d33d24a07e18e97405c",
+    "rebalance_parallel.py": "0a2b7cc33d2ebef1f6e695890539a6064ce9076b20734b2d1e615bcb1abc4cf9",
+    "test_parallel_continue.py": "f61b678061c6b8aa76ea591511b5e9460a6b903d998a718757d6fd0b06dc1904",
+    "test_parallel_v2.py": "0fad9d1ba937e6d7b7ba6ab0f393654ea26afdcb6eed8c77abf47e27de1eb792"
+  }
+}

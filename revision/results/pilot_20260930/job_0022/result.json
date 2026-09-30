@@ -1,0 +1,47 @@
+{
+  "job": {
+    "repeat": 0,
+    "case": {
+      "name": "tanh_c35",
+      "source": "tanh",
+      "quintic": true
+    },
+    "pnr": 35,
+    "method": "lasso"
+  },
+  "selected": {
+    "memory": 4,
+    "parameter": 0.1,
+    "eta": null,
+    "validation_db": 8.044739943138035,
+    "build_fit_validation_sec": 0.7944922279566526,
+    "status": "ok",
+    "converged": true,
+    "iterations": 4600,
+    "kkt_relative": 3.785737819508458e-07,
+    "fit_sec": 3.3282050960697234,
+    "screen_sec": 0.04259100602939725,
+    "n_full": 760,
+    "n_screen": 760,
+    "n_active": 1,
+    "score_min": 0.4987149136467777,
+    "score_max": 0.9222252336403224
+  },
+  "test_observed_db": 7.559035990477447,
+  "test_pim_only_db": 7.572024680568306,
+  "support": [
+    [
+      "c3",
+      3,
+      3,
+      3
+    ]
+  ],
+  "tuning_sec": 17.812282613944262,
+  "inference_median_sec": 0.0003995010629296303,
+  "inference_us_per_sample": 0.13038546440262086,
+  "inference_repeats": 3,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 316456960,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

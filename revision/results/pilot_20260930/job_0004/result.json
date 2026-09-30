@@ -1,0 +1,71 @@
+{
+  "job": {
+    "repeat": 0,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": null,
+    "method": "lasso"
+  },
+  "selected": {
+    "memory": 4,
+    "parameter": 0.01,
+    "eta": null,
+    "validation_db": 15.833999122118525,
+    "build_fit_validation_sec": 0.03887160704471171,
+    "status": "ok",
+    "converged": true,
+    "iterations": 4000,
+    "kkt_relative": 9.507246054952147e-07,
+    "fit_sec": 0.09015962295234203,
+    "screen_sec": 0.0018803020939230919,
+    "n_full": 40,
+    "n_screen": 40,
+    "n_active": 5,
+    "score_min": 0.6916586539079064,
+    "score_max": 0.9261322108440155
+  },
+  "test_observed_db": 14.987567286039049,
+  "test_pim_only_db": 14.987567286039049,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      3
+    ],
+    [
+      "c3",
+      0,
+      1,
+      0
+    ],
+    [
+      "c3",
+      0,
+      2,
+      0
+    ],
+    [
+      "c3",
+      3,
+      3,
+      0
+    ],
+    [
+      "c3",
+      3,
+      3,
+      3
+    ]
+  ],
+  "tuning_sec": 0.668235519900918,
+  "inference_median_sec": 0.0028973540756851435,
+  "inference_us_per_sample": 0.9456116435003732,
+  "inference_repeats": 3,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 125403136,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

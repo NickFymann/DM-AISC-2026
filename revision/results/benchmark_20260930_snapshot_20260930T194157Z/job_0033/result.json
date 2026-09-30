@@ -1,0 +1,149 @@
+{
+  "job": {
+    "repeat": 0,
+    "case": {
+      "name": "tanh_c3",
+      "source": "tanh",
+      "quintic": false
+    },
+    "pnr": 20,
+    "method": "screen_sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": 0.8,
+    "validation_db": 18.963947105715445,
+    "build_fit_validation_sec": 0.12658042600378394,
+    "status": "ok",
+    "converged": true,
+    "iterations": 375,
+    "last_mu_relative_change": 9.915157543868327e-07,
+    "alpha": [
+      72.59892637109301,
+      14.383746750315268,
+      47279.743507899366,
+      5.350289299642887,
+      312348.1621992402,
+      0.4591822147488946,
+      1.8130414205294425,
+      133642.0306543687,
+      0.14581276321770711,
+      36.96113693698376,
+      0.2745033074026461,
+      577281.806437939,
+      0.4449397164759313
+    ],
+    "active_local": [
+      0,
+      1,
+      6,
+      23,
+      52,
+      65,
+      76,
+      90,
+      96,
+      107,
+      110,
+      111,
+      112
+    ],
+    "fit_sec": 0.11772001790814102,
+    "screen_sec": 0.009378491900861263,
+    "n_full": 126,
+    "n_screen": 113,
+    "n_active": 13,
+    "score_min": 0.7182686840528468,
+    "score_max": 0.983548585980904
+  },
+  "test_observed_db": 18.345896392486956,
+  "test_pim_only_db": 24.94847262249087,
+  "support": [
+    [
+      "c3",
+      0,
+      1,
+      4
+    ],
+    [
+      "c3",
+      0,
+      2,
+      1
+    ],
+    [
+      "c3",
+      0,
+      3,
+      0
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      1,
+      5,
+      5
+    ],
+    [
+      "c3",
+      2,
+      4,
+      0
+    ],
+    [
+      "c3",
+      2,
+      5,
+      5
+    ],
+    [
+      "c3",
+      3,
+      5,
+      1
+    ],
+    [
+      "c3",
+      4,
+      4,
+      1
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      3
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 3.5867550938855857,
+  "inference_median_sec": 0.004087801091372967,
+  "inference_us_per_sample": 1.3341387373932658,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 159219712,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

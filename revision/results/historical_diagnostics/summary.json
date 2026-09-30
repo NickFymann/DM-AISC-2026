@@ -1,0 +1,177 @@
+{
+  "source_sha256": "9af9505e0f38f384dd7d78f9a047a0dd50c35391bda8f95a3e50c31824ac8618",
+  "scope": "Historical split and exact update order; diagnostic only, not a new independent test estimate.",
+  "rows": [
+    {
+      "alpha_init": 0.1,
+      "cap": 500,
+      "iterations": 500,
+      "converged": false,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.26475634197297,
+      "last_mu_relative_change": 2.1779514212313367e-05,
+      "trajectory": "init_0.1_cap_500.json"
+    },
+    {
+      "alpha_init": 0.1,
+      "cap": 2000,
+      "iterations": 1603,
+      "converged": true,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.265265338015695,
+      "last_mu_relative_change": 9.997127338771493e-07,
+      "trajectory": "init_0.1_cap_2000.json"
+    },
+    {
+      "alpha_init": 0.1,
+      "cap": 5000,
+      "iterations": 1603,
+      "converged": true,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.265265338015695,
+      "last_mu_relative_change": 9.997127338771493e-07,
+      "trajectory": "init_0.1_cap_5000.json"
+    },
+    {
+      "alpha_init": 1.0,
+      "cap": 500,
+      "iterations": 500,
+      "converged": false,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.26464457566469,
+      "last_mu_relative_change": 2.404070901889645e-05,
+      "trajectory": "init_1_cap_500.json"
+    },
+    {
+      "alpha_init": 1.0,
+      "cap": 2000,
+      "iterations": 1623,
+      "converged": true,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.265265306664006,
+      "last_mu_relative_change": 9.98809211887253e-07,
+      "trajectory": "init_1_cap_2000.json"
+    },
+    {
+      "alpha_init": 1.0,
+      "cap": 5000,
+      "iterations": 1623,
+      "converged": true,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.265265306664006,
+      "last_mu_relative_change": 9.98809211887253e-07,
+      "trajectory": "init_1_cap_5000.json"
+    },
+    {
+      "alpha_init": 10.0,
+      "cap": 500,
+      "iterations": 500,
+      "converged": false,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.26470763690924,
+      "last_mu_relative_change": 2.2780059711182002e-05,
+      "trajectory": "init_10_cap_500.json"
+    },
+    {
+      "alpha_init": 10.0,
+      "cap": 2000,
+      "iterations": 1612,
+      "converged": true,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.265265336359235,
+      "last_mu_relative_change": 9.996588947634262e-07,
+      "trajectory": "init_10_cap_2000.json"
+    },
+    {
+      "alpha_init": 10.0,
+      "cap": 5000,
+      "iterations": 1612,
+      "converged": true,
+      "active": 7,
+      "support": [
+        34,
+        35,
+        41,
+        47,
+        118,
+        120,
+        125
+      ],
+      "test_db": 51.265265336359235,
+      "last_mu_relative_change": 9.996588947634262e-07,
+      "trajectory": "init_10_cap_5000.json"
+    }
+  ]
+}

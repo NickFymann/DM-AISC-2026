@@ -1,0 +1,567 @@
+{
+  "checks": [
+    {
+      "name": "source vs MATLAB S0",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "linear FIR vs MATLAB",
+      "passed": true,
+      "shape": [
+        11
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "sample count",
+      "passed": true,
+      "shape": [],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "sample rate",
+      "passed": true,
+      "shape": [],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "seed",
+      "passed": true,
+      "shape": [],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "port vs MATLAB/FS",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 8.540425102733627e-13,
+      "max_relative": 9.556488103970036e-15,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/FS0",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 2.338134170813413e-13,
+      "max_relative": 2.427889991584562e-15,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/F_new",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 8.511113492563646e-14,
+      "max_relative": 3.938235113468635e-14,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/NL",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 1.371096473300786e-13,
+      "max_relative": 1.4174102033052676e-14,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/f",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 2.9802322387695312e-08,
+      "max_relative": 2.328306436538696e-16,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/flt",
+      "passed": true,
+      "shape": [
+        2049
+      ],
+      "exact": false,
+      "max_abs": 1.3877787807814457e-17,
+      "max_relative": 2.7762280918225806e-16,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/flt0",
+      "passed": true,
+      "shape": [
+        2049
+      ],
+      "exact": false,
+      "max_abs": 5.551115123125783e-17,
+      "max_relative": 2.775769758259431e-16,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/flt1",
+      "passed": true,
+      "shape": [
+        2049
+      ],
+      "exact": false,
+      "max_abs": 1.5515838457795457e-17,
+      "max_relative": 3.1039173671799093e-16,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/flt2",
+      "passed": true,
+      "shape": [
+        2049
+      ],
+      "exact": false,
+      "max_abs": 1.5515838457795457e-17,
+      "max_relative": 3.1039173671799093e-16,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/new",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 4.871281437650172e-15,
+      "max_relative": 3.25076534830384e-14,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/new0",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 1.4776328251366877e-15,
+      "max_relative": 7.998592855519373e-14,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/sig",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 5.911782863512041e-15,
+      "max_relative": 1.750407218577024e-14,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/sig0",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 1.3888885600717777e-15,
+      "max_relative": 3.6695224310257796e-15,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/sig1",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 1.1948618652546395e-15,
+      "max_relative": 5.0753497924560324e-15,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/sig2",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 1.2219547806213713e-15,
+      "max_relative": 4.6409783741141875e-15,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "port vs MATLAB/sig_NL",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 4.884527893672378e-15,
+      "max_relative": 3.259605141441637e-14,
+      "tolerance": 1e-13
+    },
+    {
+      "name": "active vs port/source",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs port/drive",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs port/linear_response",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs port/raw_pim",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs port/filtered_pim",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs port/output_filter",
+      "passed": true,
+      "shape": [
+        2049
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs pim5/12345/cubic/filtered",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active drive vs archived references/12345/cubic",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 7.850462293418876e-17,
+      "max_relative": 2.0741367095812083e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "active vs verify/cubic/linear_response",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs verify/cubic/raw_pim",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs verify/cubic/filtered_pim",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs pim5/12345/tanh/filtered",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active drive vs archived references/12345/tanh",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 7.850462293418876e-17,
+      "max_relative": 2.0741367095812083e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "active vs verify/tanh/linear_response",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs verify/tanh/raw_pim",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs verify/tanh/filtered_pim",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs pim5/12345/exp/filtered",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active drive vs archived references/12345/exp",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 7.850462293418876e-17,
+      "max_relative": 2.0741367095812083e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "active vs verify/exp/linear_response",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs verify/exp/raw_pim",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs verify/exp/filtered_pim",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active vs pim5/7/cubic/filtered",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active drive vs archived references/7/cubic",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 6.206335383118183e-17,
+      "max_relative": 1.8169416993158982e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "active vs pim5/7/tanh/filtered",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active drive vs archived references/7/tanh",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 6.206335383118183e-17,
+      "max_relative": 1.8169416993158982e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "active vs pim5/7/exp/filtered",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": true,
+      "max_abs": 0.0,
+      "max_relative": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "active drive vs archived references/7/exp",
+      "passed": true,
+      "shape": [
+        10240
+      ],
+      "exact": false,
+      "max_abs": 6.206335383118183e-17,
+      "max_relative": 1.8169416993158982e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "active rejects unknown nonlinearity",
+      "passed": true
+    },
+    {
+      "name": "pim5 rejects unknown nonlinearity",
+      "passed": true
+    },
+    {
+      "name": "verify rejects unknown nonlinearity",
+      "passed": true
+    }
+  ],
+  "input_sha256": "75e58a0dc3867eaa1b8d8c1649b3c9463f9cf6aca1d9d3c2e1fef7d220e0a7ef",
+  "reference_sha256": "96a88b39679733819ecca986a819e17633c7833977d2fe3e01a49b96c766c0f1",
+  "splits_zero_based_inclusive": {
+    "archived": {
+      "train": [
+        4112,
+        7175
+      ],
+      "test": [
+        7176,
+        10239
+      ]
+    },
+    "active": {
+      "train": [
+        2064,
+        8603
+      ],
+      "test": [
+        8604,
+        10239
+      ]
+    }
+  },
+  "defaults": {
+    "active": "cubic",
+    "pim5": "tanh"
+  },
+  "passed": true
+}

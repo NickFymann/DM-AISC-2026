@@ -1,0 +1,869 @@
+{
+  "scope": "Infrastructure pilot only; not the final reviewer benchmark",
+  "rows": [
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "ridge",
+      "observed_db": {
+        "n": 1,
+        "mean": 48.92154055704122,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.0,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 40.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 129.15234375,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 6.718432783652535,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "sbl",
+      "observed_db": {
+        "n": 1,
+        "mean": 45.53861908910024,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -3.3829214679409816,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 30.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 124.5390625,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 5.3794223082059744,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "screen_ridge",
+      "observed_db": {
+        "n": 1,
+        "mean": 48.92154055704122,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.0,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 40.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 129.31640625,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 6.272722894019465,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "screen_sbl",
+      "observed_db": {
+        "n": 1,
+        "mean": 47.337738434183606,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -1.5838021228576125,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 24.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 121.64453125,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 4.5508714380623,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "lasso",
+      "observed_db": {
+        "n": 1,
+        "mean": 14.987567286039049,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -33.93397327100217,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 5.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 119.59375,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 0.9456116435003732,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "omp",
+      "observed_db": {
+        "n": 1,
+        "mean": 54.843602015873444,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 5.922061458832225,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 20.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 121.53125,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 3.9941530799926026,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "ridge",
+      "observed_db": {
+        "n": 1,
+        "mean": 33.834351334041145,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.0,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 40.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 129.05078125,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 6.173502540765403,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "sbl",
+      "observed_db": {
+        "n": 1,
+        "mean": 33.69840130054779,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -0.13595003349335144,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 27.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 123.60546875,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 4.987762715088753,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "screen_ridge",
+      "observed_db": {
+        "n": 1,
+        "mean": 33.834351334041145,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.0,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 40.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 129.265625,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 6.396342667704813,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "screen_sbl",
+      "observed_db": {
+        "n": 1,
+        "mean": 33.77554683220299,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -0.058804501838153556,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 24.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 129.1171875,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 4.5927842214518755,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "lasso",
+      "observed_db": {
+        "n": 1,
+        "mean": 14.9332075668388,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -18.901143767202345,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 4.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 122.38671875,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 0.43206171293113155,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "omp",
+      "observed_db": {
+        "n": 1,
+        "mean": 33.91167866660129,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.07732733256014512,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 20.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 121.28515625,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 3.9087150242257445,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "ridge",
+      "observed_db": {
+        "n": 1,
+        "mean": 29.175516742817244,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.0,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 760.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 318.71484375,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 111.009889053103,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "sbl",
+      "observed_db": {
+        "n": 1,
+        "mean": 29.337681499820675,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.16216475700343125,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 44.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 323.4765625,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 7.006892625621809,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "screen_ridge",
+      "observed_db": {
+        "n": 1,
+        "mean": 29.175516742817244,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.0,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 760.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 318.80078125,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 111.08560901312717,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "screen_sbl",
+      "observed_db": {
+        "n": 1,
+        "mean": 29.337681499820675,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.16216475700343125,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 44.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 323.78125,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 6.910909560579544,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "lasso",
+      "observed_db": {
+        "n": 1,
+        "mean": 7.572216474419289,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -21.603300268397955,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 1.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 301.8984375,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 0.12843345605595616,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "omp",
+      "observed_db": {
+        "n": 1,
+        "mean": 25.151256607270366,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -4.024260135546879,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 20.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 296.515625,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 2.1320607515620966,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "ridge",
+      "observed_db": {
+        "n": 1,
+        "mean": 27.96077445784408,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.0,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 760.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 318.8046875,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 120.87135216435199,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "sbl",
+      "observed_db": {
+        "n": 1,
+        "mean": 27.920631489408933,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -0.04014296843514842,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 60.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 323.21875,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 7.601014725066352,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "screen_ridge",
+      "observed_db": {
+        "n": 1,
+        "mean": 27.96077445784408,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": 0.0,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 760.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 318.89453125,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 116.8273306207357,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "screen_sbl",
+      "observed_db": {
+        "n": 1,
+        "mean": 27.920631489408933,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -0.04014296843514842,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 60.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 323.4375,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 7.664531669348439,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "lasso",
+      "observed_db": {
+        "n": 1,
+        "mean": 7.559035990477447,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -20.401738467366634,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 1.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 301.796875,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 0.13038546440262086,
+        "sd": null,
+        "ci95": null
+      }
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "omp",
+      "observed_db": {
+        "n": 1,
+        "mean": 24.64419168433355,
+        "sd": null,
+        "ci95": null
+      },
+      "paired_difference_to_ridge_db": {
+        "n": 1,
+        "mean": -3.3165827735105324,
+        "sd": null,
+        "ci95": null
+      },
+      "support_jaccard_same_memory": null,
+      "active": {
+        "n": 1,
+        "mean": 20.0,
+        "sd": null,
+        "ci95": null
+      },
+      "workflow_peak_mib": {
+        "n": 1,
+        "mean": 296.7421875,
+        "sd": null,
+        "ci95": null
+      },
+      "inference_us_per_sample": {
+        "n": 1,
+        "mean": 2.147589354865817,
+        "sd": null,
+        "ci95": null
+      }
+    }
+  ]
+}

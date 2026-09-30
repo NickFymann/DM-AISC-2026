@@ -1,0 +1,17 @@
+{
+  "pid": 3873693,
+  "initial_launcher_pid": 3834091,
+  "directory": "/home/agent/4lchem1st/dm-aisc-2026-revision",
+  "output": "benchmark_20260930",
+  "log": "benchmark_20260930_parallel_v2.log",
+  "scheduler": "parallel_continue_v2.py",
+  "workers": 4,
+  "physical_core_cpu_slots": [0, 2, 4, 6],
+  "headroom_gib": 2.5,
+  "handoff_record": "results/four_core_handoff_20260930/handoff_4workers.json",
+  "timing_comparison_requires_serial_profiling": true,
+  "config_sha256": "68850a92886341b2dff435604be634037c153266a6068693899cc5c0926fc5d2",
+  "jobs_requested": 720,
+  "max_run_hours": 24,
+  "blas_threads": 1
+}

@@ -1,0 +1,150 @@
+\subsection{Synthetic Data Generation and Model Justification}
+
+To rigorously evaluate the proposed Sparse Bayesian Learning (SBL) framework, we generated synthetic datasets that emulate a multi-carrier Frequency Division Duplex (FDD) transceiver. This approach provides a known ground truth, allowing for precise benchmarking of the cancellation performance.
+
+\subsubsection{Transmit Signal Generation}
+
+The known complex baseband transmit sequence is denoted as \( x[n] \). It is generated as a complex white process with independent real and imaginary parts, each drawn from a continuous uniform distribution over the interval \([0, 1)\). A fixed random seed is used to ensure reproducibility.
+
+The dual-carrier structure is introduced by filtering \( x[n] \) with two separate linear-phase FIR filters of order 2048 with a normalized cutoff of 0.05, followed by a frequency shift of \( \pm 30 \) MHz, corresponding to the duplex spacing. This yields the two complex baseband carrier signals:
+
+\begin{equation}
+x_1[n] = \left( x[n] * h_{\mathrm{LPF}}[n] \right) \cdot e^{j 2\pi f_{\mathrm{shift}} n / f_s},
+\end{equation}
+
+\begin{equation}
+x_2[n] = \left( x[n] * h_{\mathrm{LPF}}[n] \right) \cdot e^{-j 2\pi f_{\mathrm{shift}} n / f_s},
+\end{equation}
+
+where \( h_{\mathrm{LPF}}[n] \) is the low-pass filter impulse response, \( f_{\mathrm{shift}} = 30 \) MHz is the frequency offset between the carriers, and \( f_s = 256 \) MHz is the sampling frequency. The two carriers are then summed to form the composite signal:
+
+\begin{equation}
+x_{\mathrm{tx}}[n] = x_1[n] + x_2[n].
+\end{equation}
+
+\subsubsection{Linear Distortion with Memory}
+
+To model the non-ideal linear characteristics of the transceiver, a finite-impulse response (FIR) filter \( h[m] \) is applied to the composite signal:
+
+\begin{equation}
+s[n] = \sum_{m=0}^{M_h - 1} h[m] \, x_{\mathrm{tx}}[n - m],
+\end{equation}
+
+where \( M_h = 11 \) is the length of the impulse response. The filter coefficients \( h[m] \) are complex-valued and are given in Table \ref{tab:filter_coeffs}, modeling a typical RF front-end with both amplitude and phase distortion across the signal bandwidth. This linear filter introduces memory into the system, so while the subsequent nonlinearity is memoryless, the overall input-to-output relationship includes memory effects.
+
+\begin{table}[h]
+\centering
+\caption{Complex-valued linear filter coefficients \( h[m] \) used in the transceiver model.}
+\label{tab:filter_coeffs}
+\begin{tabular}{|c|c|}
+\hline
+\( m \) & \( h[m] \) \\
+\hline
+0 & \( 0.186 - 0.023j \) \\
+1 & \( -0.098 + 0.117j \) \\
+2 & \( 0.291 - 0.338j \) \\
+3 & \( -0.607 + 0.628j \) \\
+4 & \( 1.131 - 1.348j \) \\
+5 & \( -1.090 + 0.993j \) \\
+6 & \( 1.633 - 1.725j \) \\
+7 & \( -1.415 + 1.365j \) \\
+8 & \( 0.760 - 0.668j \) \\
+9 & \( -0.256 + 0.211j \) \\
+10 & \( 0.045 - 0.037j \) \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Memoryless Nonlinear PIM Generation}
+
+The filtered signal \( s[n] \) is passed through a memoryless nonlinearity \( g(\cdot) \):
+
+\begin{equation}
+p[n] = g\left(s[n]\right).
+\end{equation}
+
+Substituting the expression for \( s[n] \) from (4) into (6), the PIM signal can be expressed as:
+
+\begin{equation}
+p[n] = g\left( \sum_{m=0}^{M_h - 1} h[m] \, x_{\mathrm{tx}}[n - m] \right).
+\end{equation}
+
+This expression shows that the PIM at time \( n \) depends not only on the current transmit sample \( x_{\mathrm{tx}}[n] \), but also on a window of past samples \( x_{\mathrm{tx}}[n - m] \). Thus, the linear filter introduces memory into the system. In PIM modeling, this memory effect is typically captured by Volterra-type basis functions that include delayed versions of the input signal.
+
+In our implementation, the linear filter coefficients \( h[m] \) in Table \ref{tab:filter_coeffs} are centered, meaning that the filter has both pre-cursor (future) and post-cursor (past) taps. This is because the convolution is performed on a block of stored samples, allowing the use of a non-causal filter. The filter length \( M_h = 11 \) includes taps with negative and positive delays relative to the current sample index.
+
+The use of future samples is physically justified in the context of PIM cancellation because the processing is performed offline on a block of captured data. In a real transceiver, the received signal is stored in a buffer before cancellation, and the canceller can align the transmit and receive signals with a fixed delay. This allows the canceller to use both past and future transmit samples relative to the current receive sample, as long as the entire block is available. This is standard practice in digital PIM cancellation and self-interference cancellation systems, where the processing latency is acceptable and the buffer provides a window of samples around the current time index.
+
+Thus, the centered filter captures both the causal and non-causal components of the linear distortion, ensuring that the memory effects in the PIM signal are accurately modeled.
+
+\paragraph{Third-Order Polynomial Model}
+
+For the baseline model, the nonlinearity is a third-order polynomial:
+
+\begin{equation}
+g_{\mathrm{3}}(s[n]) = \alpha \cdot s[n] \cdot |s[n]|^2,
+\end{equation}
+
+where \( \alpha = 1.2 + 3.7j \) is the complex nonlinearity gain.
+
+\paragraph{Justification of the Hyperbolic Tangent Model}
+
+To assess the robustness of the SBL framework against realistic PIM behavior, we adopted the hyperbolic tangent (tanh) nonlinearity as an alternative to the standard cubic polynomial. This choice is motivated by the experimental work of Christianson, Henrie, and Chappell (2008) \cite{Christianson2008HigherOrder,Henrie2008Prediction}, who demonstrated that a tanh-based current-voltage (I-V) model accurately characterizes the nonlinear behavior of coaxial connectors over a broad range of input powers.
+
+In their study, Christianson et al. measured PIM products up to the 29th order from coaxial connectors. They observed that the power dependence of the third-order intermodulation (IM3) product deviates significantly from the classical 3 dB/dB slope predicted by a simple cubic polynomial \cite{Christianson2008HigherOrder}. This deviation indicates that the underlying nonlinearity is not strictly cubic—a phenomenon that cannot be captured by low-order polynomial models.
+
+The authors further demonstrated that fitting a polynomial to the measured PIM behavior required a 24-term, 49th-order polynomial to span a 30 dB input power range, and even then, the model diverged outside the fitted range \cite{Christianson2008HigherOrder}. This highlights the instability and inefficiency of polynomial expansions for realistic PIM modeling.
+
+To overcome these limitations, Christianson et al. proposed an I-V curve of the form \cite{Henrie2008Prediction}:
+
+\begin{equation}
+I(V) = g_0 \left[ V + k_1 \tanh(k_2 V) \right],
+\end{equation}
+
+where \(g_0\) sets the linear admittance, and \(k_1\) and \(k_2\) are adjustable parameters. This model was shown to accurately predict the power dependence of higher-order PIM products across a 21 dB input power range, with a root mean squared error of 3.5 dB \cite{Christianson2008HigherOrder}.
+
+The tanh function provides a bounded, saturating nonlinearity, which is physically more realistic for passive components than an unbounded polynomial. This saturation behavior is consistent with the observed "softening" of the I-V curve at high input powers, where the incremental nonlinearity decreases.
+
+Our complex baseband implementation of the tanh model is:
+
+\begin{equation}
+g_{\mathrm{tanh}}(s[n]) = \alpha \cdot \tanh\left(\gamma \cdot |s[n]|\right) \cdot \frac{s[n]}{|s[n]| + \epsilon},
+\end{equation}
+
+where \(\alpha\) is a complex gain, \(\gamma\) controls the saturation steepness, and \(\epsilon\) is a small regularization constant.
+
+This construction directly corresponds to the I-V model of Christianson et al. in the following ways:
+
+\begin{enumerate}
+    \item \textbf{Magnitude-Phase Decomposition:} The tanh function is applied to the magnitude \(|s[n]|\), while the phase is preserved by the factor \(s[n]/|s[n]|\). This is the correct baseband equivalent of a real-valued odd nonlinearity, as required by the physical symmetry of passive components.
+    \item \textbf{Saturation Behavior:} The parameter \(\gamma\) controls the saturation steepness, analogous to \(k_2\) in the original model. For small magnitudes, \(\tanh(\gamma |s|) \approx \gamma |s|\), yielding a cubic-like response. For large magnitudes, the function saturates, mimicking the observed high-power behavior.
+    \item \textbf{Nonlinearity Strength:} The complex gain \(\alpha\) encapsulates the overall strength of the nonlinearity, including any phase shifts introduced by the physical mechanism, similar to the combined effect of \(g_0\) and \(k_1\) in the original I-V curve.
+\end{enumerate}
+
+Thus, our tanh-based PIM generator is a faithful complex baseband realization of the validated model from Christianson et al. (2008), providing a realistic and physically motivated test case for the SBL framework.
+
+\subsubsection{Frequency Shift and Isolation of the PIM Product}
+
+The output of the nonlinearity \( p[n] \) contains multiple intermodulation products distributed across the frequency spectrum. To isolate the desired third-order intermodulation product, the signal is multiplied by a complex exponential to shift it in frequency by \( F_{\mathrm{up}} = 90 \) MHz:
+
+\begin{equation}
+p_{\mathrm{shift}}[n] = p[n] \cdot e^{j 2\pi F_{\mathrm{up}} n / f_s}.
+\end{equation}
+
+The shifted signal is then passed through a low-pass filter with normalized cutoff 0.2, corresponding to a bandwidth of \( \pm 25.6 \) MHz at the given sampling rate. This isolates the desired PIM component while rejecting the other intermodulation products and the original carrier tones. The resulting output is the clean PIM observation vector:
+
+\begin{equation}
+\mathbf{y}_{\mathrm{clean}} = [y_{\mathrm{clean}}[0], \ldots, y_{\mathrm{clean}}[N-1]]^T,
+\end{equation}
+
+where \( N = 10240 \) is the number of usable samples after removing edge effects required by the maximum memory depth of the dictionary.
+
+\subsubsection{Noisy Observations}
+
+For the noisy experiments, circular complex Gaussian noise is added to the clean target:
+
+\begin{equation}
+\mathbf{y}_{\mathrm{noisy}} = \mathbf{y}_{\mathrm{clean}} + \mathbf{v},
+\end{equation}
+
+where \( \mathbf{v} \) is generated according to the target PIM-to-noise ratio (SNR) defined in Section \ref{sec:noise}.

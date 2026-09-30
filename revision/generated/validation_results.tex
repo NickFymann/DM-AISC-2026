@@ -1,0 +1,14 @@
+An infrastructure pilot completed all 24 method/scenario jobs using independent fitting, validation and test records. It covers only $M\in\{2,4\}$, one repetition, the cubic/cubic and tanh/cubic--quintic cases, and clean or 35 dB PIM-to-noise observations. Table~\ref{tab:pilot} reports its untouched-test scores; these pilot results do not provide means, variability or the final benchmark comparison.
+\begin{table*}[!t]
+\caption{Pipeline pilot only: validation-selected test cancellation (dB), one repetition and $M\in\{2,4\}$.}
+\label{tab:pilot}\centering\small
+\begin{tabular}{lrrrr}\toprule
+Method & Cubic clean & Cubic 35 dB & Tanh 3+5 clean & Tanh 3+5 35 dB\\\midrule
+Ridge-LS & 48.92 & 33.83 & 29.18 & 27.96\\
+SBL & 45.54 & 33.70 & 29.34 & 27.92\\
+Screen + ridge-LS & 48.92 & 33.83 & 29.18 & 27.96\\
+Screen + SBL & 47.34 & 33.78 & 29.34 & 27.92\\
+Complex LASSO & 14.99 & 14.93 & 7.57 & 7.56\\
+Complex OMP & 54.84 & 33.91 & 25.15 & 24.64\\
+\bottomrule\end{tabular}\end{table*}
+The full candidate logs, selected settings, screening counts, process peak memory and inference timings are retained with the pilot. Hyperparameter search grids differ between estimator families but all use the same validation records. A screening branch may choose a higher threshold and therefore need not equal its unscreened counterpart. The fixed-$\eta=0.01$ control remains separate from this tuned comparison.

@@ -1,0 +1,24 @@
+{
+  "pid": 3854327,
+  "workers": 3,
+  "directory": "/home/agent/4lchem1st/dm-aisc-2026-revision/benchmark_20260930",
+  "adopted": [
+    {
+      "index": 51,
+      "pid": 3851513,
+      "created": 1790795630.29,
+      "cmdline": [
+        "/home/agent/4lchem1st/dm-aisc-2026-revision/.venv/bin/python",
+        "/home/agent/4lchem1st/dm-aisc-2026-revision/run_experiments.py",
+        "--config",
+        "/home/agent/4lchem1st/dm-aisc-2026-revision/benchmark.json",
+        "--output",
+        "/home/agent/4lchem1st/dm-aisc-2026-revision/benchmark_20260930/job_0051",
+        "--worker",
+        "/home/agent/4lchem1st/dm-aisc-2026-revision/benchmark_20260930/job_0051/job.json"
+      ]
+    }
+  ],
+  "serial_completed": 51,
+  "log": "/home/agent/4lchem1st/dm-aisc-2026-revision/benchmark_20260930_parallel.log"
+}

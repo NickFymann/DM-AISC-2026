@@ -1,0 +1,26 @@
+{
+  "scheduler_tests_linux": {
+    "passed": 6,
+    "failed": 0
+  },
+  "numerical_tests_local": {
+    "passed": 11,
+    "failed": 0
+  },
+  "original_completed_files_verified_unchanged": 323,
+  "source_sha256": {
+    "handoff_parallel.py": "3a4d754becc53860e67fce56276756579a57ce7697d46c67761451ac9481478c",
+    "parallel_continue.py": "582ecba56b4ad4ac6176fd45e66185f130988e0c1bc42539894a03ae191ea4c3",
+    "test_parallel_continue.py": "5c41479e420ce004d444560743e595e9acd3477b1a6237850f058f2b808e76cd"
+  },
+  "max_workers": 3,
+  "active_workers_observed": 3,
+  "initial_parallel_cpu_percent_per_worker": [
+    102,
+    104,
+    104
+  ],
+  "observed_parallel_error": false,
+  "performance_comparison_valid": false,
+  "status_snapshot_is_not_live": true
+}

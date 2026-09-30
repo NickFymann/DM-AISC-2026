@@ -1,0 +1,16 @@
+{
+  "purpose": "Infrastructure pilot only; not the final reviewer benchmark",
+  "seed_base": 20261001,
+  "repeats": 1,
+  "samples_per_stage": 3064,
+  "memories": [2, 4],
+  "cases": [{"name": "cubic_c3", "source": "cubic", "quintic": false}, {"name": "tanh_c35", "source": "tanh", "quintic": true}],
+  "pnr_db": [null, 35],
+  "methods": ["ridge", "sbl", "screen_ridge", "screen_sbl", "lasso", "omp"],
+  "eta": [0.01, 0.8],
+  "grids": {"ridge": [0.00000001, 0.000001, 0.0001], "sbl": [10000, 1000000], "lasso": [0.001, 0.01, 0.1], "omp": [5, 10, 20]},
+  "sbl_max_iter": 2000,
+  "memory_budget_gib": 10,
+  "inference_repeats": 3,
+  "task_timeout_sec": 900
+}

@@ -1,0 +1,250 @@
+{
+  "scope": "Selected definitions extracted by AST; no notebook sweep or plotting cells executed. Original files unchanged.",
+  "files": [
+    {
+      "path": "DM-AISC-2026\\01_pim_cubic_source_cubic_dictionary_clean.ipynb",
+      "sha256": "9af9505e0f38f384dd7d78f9a047a0dd50c35391bda8f95a3e50c31824ac8618",
+      "outputs": 0
+    },
+    {
+      "path": "DM-AISC-2026\\02_pim_tanh_source_cubic_dictionary_clean.ipynb",
+      "sha256": "24865c15eed2481b1a21d41de93e4999a2c3e44a30976fbf2dd4fb7843297a28",
+      "outputs": 0
+    },
+    {
+      "path": "DM-AISC-2026\\03_pim_tanh_source_cubic_dictionary_awgn_35db_below_pim.ipynb",
+      "sha256": "6590e6a971fb92baa8b68f25f0921fe5611891c1c5f2b5c63edc345e3f10bda5",
+      "outputs": 0
+    },
+    {
+      "path": "DM-AISC-2026\\04_pim_tanh_source_cubic_quintic_dictionary_clean.ipynb",
+      "sha256": "2d3a94e6f4374b20fbe35c6d6ca9d2f18d9c021b8535da626b3865c1fa12eef4",
+      "outputs": 0
+    },
+    {
+      "path": "DM-AISC-2026\\05_pim_tanh_source_cubic_quintic_dictionary_awgn_35db_below_pim.ipynb",
+      "sha256": "ae7c3c33e2ced9e73fc58cd8410a1b9bcc4184cd8cddce229a3f8559e02b9e1a",
+      "outputs": 0
+    }
+  ],
+  "screening": [
+    {
+      "notebook": "01",
+      "M": 2,
+      "N": 6,
+      "screened": 6,
+      "min_score": 0.7240883940713825,
+      "max_score": 0.8083394079411997,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "01",
+      "M": 4,
+      "N": 40,
+      "screened": 40,
+      "min_score": 0.7240883940713825,
+      "max_score": 0.9370842948514815,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "01",
+      "M": 6,
+      "N": 126,
+      "screened": 126,
+      "min_score": 0.7240883940713825,
+      "max_score": 0.9898550605162608,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "01",
+      "M": 8,
+      "N": 288,
+      "screened": 288,
+      "min_score": 0.7240883940713825,
+      "max_score": 0.9911293734048221,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "02",
+      "M": 2,
+      "N": 6,
+      "screened": 6,
+      "min_score": 0.7223744019989617,
+      "max_score": 0.8066628847083862,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "02",
+      "M": 4,
+      "N": 40,
+      "screened": 40,
+      "min_score": 0.7223744019989617,
+      "max_score": 0.9351245077004394,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "02",
+      "M": 6,
+      "N": 126,
+      "screened": 126,
+      "min_score": 0.7223744019989617,
+      "max_score": 0.9871957127756559,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "02",
+      "M": 8,
+      "N": 288,
+      "screened": 288,
+      "min_score": 0.7223744019989617,
+      "max_score": 0.98815463729995,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "03",
+      "M": 2,
+      "N": 6,
+      "screened": 6,
+      "min_score": 0.7222888755311486,
+      "max_score": 0.8065864437173227,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "03",
+      "M": 4,
+      "N": 40,
+      "screened": 40,
+      "min_score": 0.7222888755311486,
+      "max_score": 0.9350279659920252,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "03",
+      "M": 6,
+      "N": 126,
+      "screened": 126,
+      "min_score": 0.7222888755311486,
+      "max_score": 0.9870220029771434,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "03",
+      "M": 8,
+      "N": 288,
+      "screened": 288,
+      "min_score": 0.7222888755311486,
+      "max_score": 0.987955329940989,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "04",
+      "M": 2,
+      "N": 40,
+      "screened": 40,
+      "min_score": 0.6234916981151296,
+      "max_score": 0.8066628847083843,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "04",
+      "M": 4,
+      "N": 760,
+      "screened": 760,
+      "min_score": 0.6233573645815292,
+      "max_score": 0.9351245077004379,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "04",
+      "M": 6,
+      "N": 4788,
+      "screened": 4788,
+      "min_score": 0.6083306218006438,
+      "max_score": 0.987195712775655,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "04",
+      "M": 8,
+      "N": 18336,
+      "screened": 18336,
+      "min_score": 0.587196277993593,
+      "max_score": 0.9881546372999512,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "05",
+      "M": 2,
+      "N": 40,
+      "screened": 40,
+      "min_score": 0.6235342136266028,
+      "max_score": 0.8065864437173216,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "05",
+      "M": 4,
+      "N": 760,
+      "screened": 760,
+      "min_score": 0.6231602241481345,
+      "max_score": 0.9350279659920236,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "05",
+      "M": 6,
+      "N": 4788,
+      "screened": 4788,
+      "min_score": 0.6081228179968015,
+      "max_score": 0.9870220029771423,
+      "train": 3064,
+      "test": 3064
+    },
+    {
+      "notebook": "05",
+      "M": 8,
+      "N": 18336,
+      "screened": 18336,
+      "min_score": 0.5869826159824738,
+      "max_score": 0.9879553299409911,
+      "train": 3064,
+      "test": 3064
+    }
+  ],
+  "cubic_m6": [
+    {
+      "cap": 500,
+      "iterations": 500,
+      "converged": false,
+      "active": 7,
+      "test_db": 51.26464457566469,
+      "seconds": 0.36554030000115745
+    },
+    {
+      "cap": 2000,
+      "iterations": 1623,
+      "converged": true,
+      "active": 7,
+      "test_db": 51.265265306664006,
+      "seconds": 0.6502375999989454
+    }
+  ]
+}
