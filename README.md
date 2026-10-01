@@ -1,10 +1,13 @@
 # DM-AISC-2026
-This repository provides the computational materials used in the numerical experiments conducted for DM-AISC 2026.
 
-The five original notebooks retain the historical single-realization experiments. Their reported operating points were selected with access to test scores; they are reproduction controls, not a validation-selected benchmark.
+Computational materials and revised manuscript for the synthetic PIM-cancellation study.
 
-The manuscript is [main.tex](main.tex), with its bibliography in [references.bib](references.bib). The supplied [experiment description](experiment%20description.tex) is preserved as received; its concise, code-aligned adaptation is included in the manuscript.
+- [Revised manuscript](main.tex) and [compiled PDF](revision/build/main.pdf).
+- [Revision evidence and reproduction commands](revision/README.md).
+- [Response to all eight reviewer comments](revision/reviewer_response_en.md).
+- [Complete benchmark analysis](revision/results/analysis_20261001/README.md): 720 successful selection/test tasks, 15,840 candidate fits, ten independent repetitions per condition.
+- [Serial resource profiles](revision/results/serial_profile_20261001/protocol.json): 18 representative fixed-model refits, separate from concurrent-search timings.
 
-The ongoing reviewer revision, independent experiment runner, numerical checks, source snapshots and results are documented in [revision/README.md](revision/README.md). The current manuscript is a revision draft, not a submission-ready report of the complete repeated benchmark.
+The five original notebooks retain historical single-realization experiments whose operating points were selected using test scores. They are reproduction controls, not the revised validation-selected comparison. The original article, supplied [experiment description](experiment%20description.tex), pilot and partial snapshots remain preserved. The experiment description is concisely incorporated and reconciled with the implementation in the revised article.
 
-The [30 September 2026 interim snapshot](revision/results/benchmark_20260930_snapshot_20260930T194157Z/README.md) contains 67 of the planned 720 benchmark jobs, exact sources and checksums. The remote benchmark is still running; this partial snapshot does not support final statistical or timing comparisons.
+The conclusions are limited to the fixed synthetic path and reported finite grids. No calibrated predictive uncertainty or universal SBL superiority is claimed.

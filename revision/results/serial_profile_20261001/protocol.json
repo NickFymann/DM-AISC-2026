@@ -1,0 +1,40 @@
+{
+  "source_run": "/home/agent/4lchem1st/dm-aisc-2026-revision/benchmark_20260930_recovery_20261001",
+  "selection": "repeat 0, PNR 35 dB, every case/method; determined without reading test scores",
+  "jobs": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+  ],
+  "refits_per_job": 1,
+  "inference_warmups": 1,
+  "inference_repeats": 7,
+  "cpu_slot": 0,
+  "blas_threads": 1,
+  "timeout_per_job_sec": 3600,
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "source_sha256": {
+    "experiment.py": "789daf2bd81c251d7287d823dd3a20969b202c9767e215dbda521144c33be1cd",
+    "run_experiments.py": "3da5933a3474007f080004c58fe634bc51cb5212f22532f6b347821f55eb293a",
+    "summarize.py": "3cb792f3a488733545ec726abfb5ee79bf78f671a8adf2a3da9c57544e9b7942",
+    "launch_benchmark.py": "70518f651660ee8a3ee089ec5b21ae93b537a31a81f04d99bac1d9aa55e51a2b"
+  },
+  "script_sha256": "697292f02a0f90ee2e70947cefa9577a55b69b8c66d519b166fd1480dd4cdbbb",
+  "interpretation": "Representative single-refit timings, not population timing estimates. Full tuning is excluded."
+}

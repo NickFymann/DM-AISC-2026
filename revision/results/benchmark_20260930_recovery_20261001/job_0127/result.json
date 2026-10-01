@@ -1,0 +1,121 @@
+{
+  "job": {
+    "repeat": 1,
+    "case": {
+      "name": "tanh_c35",
+      "source": "tanh",
+      "quintic": true
+    },
+    "pnr": 20,
+    "method": "sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 10000,
+    "eta": null,
+    "validation_db": 19.49859098726154,
+    "build_fit_validation_sec": 9.1064204829745,
+    "status": "ok",
+    "converged": true,
+    "iterations": 555,
+    "last_mu_relative_change": 9.891691791312354e-07,
+    "alpha": [
+      7.829580459304479,
+      109176.5479176613,
+      17.954502355271895,
+      886957.5569945832,
+      956919.9493597825,
+      387305.00502375653,
+      0.702298491129247,
+      491.046515327322,
+      272.22924234636633
+    ],
+    "active_local": [
+      35,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      2135,
+      4787
+    ],
+    "fit_sec": 280.47613577521406,
+    "screen_sec": 0.5110537621658295,
+    "n_full": 4788,
+    "n_screen": 4788,
+    "n_active": 9,
+    "score_min": 0.52653704149183,
+    "score_max": 0.9849967819642432
+  },
+  "test_observed_db": 19.61934057208142,
+  "test_pim_only_db": 28.85915549383874,
+  "support": [
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      1
+    ],
+    [
+      "c3",
+      5,
+      5,
+      2
+    ],
+    [
+      "c3",
+      5,
+      5,
+      3
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ],
+    [
+      "q5a",
+      5,
+      5,
+      5,
+      4,
+      5
+    ],
+    [
+      "q5b",
+      5,
+      5,
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 2586.8061113848817,
+  "inference_median_sec": 0.004523519892245531,
+  "inference_us_per_sample": 1.4763446123516746,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 3837796352,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

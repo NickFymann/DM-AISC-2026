@@ -1,0 +1,117 @@
+{
+  "job": {
+    "repeat": 4,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": 50,
+    "method": "sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": null,
+    "validation_db": 47.49409384831344,
+    "build_fit_validation_sec": 0.19425486400723457,
+    "status": "ok",
+    "converged": true,
+    "iterations": 375,
+    "last_mu_relative_change": 9.976823326326858e-07,
+    "alpha": [
+      804465.9215940443,
+      1075.6831979026852,
+      142.9258891493729,
+      335.0521589857636,
+      4.3684790394613735,
+      12.106790040009521,
+      24.9011182798865,
+      5.511599224747911,
+      1.265849847098159
+    ],
+    "active_local": [
+      4,
+      5,
+      31,
+      34,
+      35,
+      113,
+      120,
+      124,
+      125
+    ],
+    "fit_sec": 0.21523023210465908,
+    "screen_sec": 0.01327216811478138,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 9,
+    "score_min": 0.6827047756307245,
+    "score_max": 0.9890718768061993
+  },
+  "test_observed_db": 48.576184830276425,
+  "test_pim_only_db": 53.33023877583816,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      4
+    ],
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      1
+    ],
+    [
+      "c3",
+      0,
+      5,
+      4
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      4,
+      4,
+      5
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 2.545961658935994,
+  "inference_median_sec": 0.006217296933755279,
+  "inference_us_per_sample": 2.0291439078835767,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 158699520,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

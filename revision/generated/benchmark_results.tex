@@ -1,0 +1,115 @@
+All 720 independent selection/test tasks completed, covering 15,840 candidate fits. Each cell in Table~\ref{tab:benchmark} summarizes ten independently generated fitting/validation/test triplets. The reported dispersion is the sample standard deviation across repetitions; means are computed in dB. The supplement also provides PIM-only scores, unadjusted 95\% Student-$t$ intervals and paired method differences.
+
+\begin{table*}[!t]
+
+\caption{Untouched-test observed cancellation (dB), mean $\pm$ SD over ten repetitions. All six methods use the same fitting/validation/test records and the frozen grids in Section~\ref{sec:selection}.}
+
+\label{tab:benchmark}\centering\small\setlength{\tabcolsep}{3pt}
+
+\begin{tabular}{llrrrr}\toprule
+
+Source / dictionary & Method & Clean & PNR 20 dB & PNR 35 dB & PNR 50 dB\\\midrule
+
+Cubic / cubic & Ridge-LS & $58.02\pm0.87$ & $20.12\pm0.54$ & $35.05\pm0.54$ & $49.41\pm0.54$\\
+
+ & SBL & $51.96\pm0.65$ & $20.12\pm0.54$ & $35.00\pm0.53$ & $47.93\pm0.48$\\
+
+ & Screen + ridge & $58.02\pm0.87$ & $20.12\pm0.54$ & $35.05\pm0.54$ & $49.42\pm0.54$\\
+
+ & Screen + SBL & $51.96\pm0.65$ & $20.12\pm0.54$ & $35.00\pm0.53$ & $47.93\pm0.48$\\
+
+ & Complex LASSO & $44.65\pm1.16$ & $20.12\pm0.54$ & $34.63\pm0.54$ & $43.53\pm0.95$\\
+
+ & Complex OMP & $57.90\pm0.87$ & $20.12\pm0.54$ & $35.03\pm0.53$ & $49.40\pm0.54$\\
+
+\midrule
+
+Tanh / cubic & Ridge-LS & $24.75\pm1.22$ & $18.78\pm0.39$ & $24.34\pm1.07$ & $24.73\pm1.21$\\
+
+ & SBL & $24.78\pm1.23$ & $18.79\pm0.41$ & $24.36\pm1.09$ & $24.76\pm1.22$\\
+
+ & Screen + ridge & $24.76\pm1.22$ & $18.78\pm0.39$ & $24.35\pm1.08$ & $24.75\pm1.21$\\
+
+ & Screen + SBL & $24.76\pm1.23$ & $18.80\pm0.40$ & $24.36\pm1.09$ & $24.74\pm1.22$\\
+
+ & Complex LASSO & $24.81\pm1.19$ & $18.81\pm0.40$ & $24.39\pm1.07$ & $24.80\pm1.18$\\
+
+ & Complex OMP & $24.68\pm1.19$ & $18.77\pm0.40$ & $24.29\pm1.10$ & $24.66\pm1.18$\\
+
+\midrule
+
+Tanh / cubic--quintic & Ridge-LS & $29.43\pm0.61$ & $19.53\pm0.42$ & $28.31\pm0.50$ & $29.38\pm0.60$\\
+
+ & SBL & $29.32\pm0.69$ & $19.31\pm0.38$ & $28.29\pm0.47$ & $29.27\pm0.66$\\
+
+ & Screen + ridge & $29.46\pm0.59$ & $19.58\pm0.46$ & $28.36\pm0.49$ & $29.42\pm0.58$\\
+
+ & Screen + SBL & $29.42\pm0.61$ & $19.47\pm0.45$ & $28.33\pm0.46$ & $29.38\pm0.62$\\
+
+ & Complex LASSO & $29.40\pm0.66$ & $19.57\pm0.45$ & $28.32\pm0.56$ & $29.35\pm0.65$\\
+
+ & Complex OMP & $28.95\pm0.91$ & $19.51\pm0.43$ & $27.99\pm0.59$ & $28.98\pm0.77$\\
+
+\bottomrule\end{tabular}\end{table*}
+
+\begin{table}[!t]
+
+\caption{Mean dictionary sizes at PNR 35 dB over ten independently selected models. Fractional counts reflect different selections across repetitions. Per-configuration counts for all 15,840 fits are supplied in \texttt{candidate\_results.csv}.}
+
+\label{tab:stage-counts}\centering\scriptsize
+
+\begin{tabular}{lrrr}\toprule
+
+Method & $N_{\rm full}$ & $N_{\rm screen}$ & $N_{\rm active}$\\\midrule
+
+\multicolumn{4}{l}{\emph{Cubic / cubic}}\\
+
+Ridge-LS & 126.0 & 126.0 & 126.0\\
+
+SBL & 126.0 & 126.0 & 7.8\\
+
+Screen + ridge & 126.0 & 113.2 & 113.2\\
+
+Screen + SBL & 126.0 & 119.3 & 7.9\\
+
+Complex LASSO & 126.0 & 126.0 & 12.2\\
+
+Complex OMP & 117.4 & 117.4 & 18.0\\
+
+\midrule
+
+\multicolumn{4}{l}{\emph{Tanh / cubic}}\\
+
+Ridge-LS & 126.0 & 126.0 & 126.0\\
+
+SBL & 100.2 & 100.2 & 24.3\\
+
+Screen + ridge & 117.4 & 108.3 & 108.3\\
+
+Screen + SBL & 100.2 & 94.8 & 22.4\\
+
+Complex LASSO & 126.0 & 126.0 & 12.5\\
+
+Complex OMP & 117.4 & 117.4 & 11.5\\
+
+\midrule
+
+\multicolumn{4}{l}{\emph{Tanh / cubic--quintic}}\\
+
+Ridge-LS & 4788.0 & 4788.0 & 4788.0\\
+
+SBL & 3176.8 & 3176.8 & 30.0\\
+
+Screen + ridge & 4788.0 & 2892.0 & 2892.0\\
+
+Screen + SBL & 4385.2 & 2396.9 & 24.0\\
+
+Complex LASSO & 4788.0 & 4788.0 & 33.1\\
+
+Complex OMP & 4788.0 & 4788.0 & 20.0\\
+
+\bottomrule\end{tabular}\end{table}
+
+For the clean cubic source, tuned ridge reaches 58.02 dB, compared with 51.96 dB for SBL and 57.90 dB for OMP. Thus the revised comparison does not support an unconditional cancellation advantage for SBL. At PNR 35 dB, ridge and SBL give 35.05 and 35.00 dB, while SBL uses 7.8 active coefficients on average instead of 126.
+
+For tanh at PNR 35 dB, increasing the dictionary from cubic to cubic--quintic raises ridge cancellation from 24.34 to 28.31 dB. In the combined dictionary, screen-plus-SBL gives 28.33 dB with 24.0 active coefficients on average, compared with 28.31 dB and 4788 coefficients for ridge. The selected memories and thresholds can differ between methods; these are comparisons of validation-tuned pipelines.

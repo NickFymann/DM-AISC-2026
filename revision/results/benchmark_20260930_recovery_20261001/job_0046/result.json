@@ -1,0 +1,137 @@
+{
+  "job": {
+    "repeat": 0,
+    "case": {
+      "name": "tanh_c3",
+      "source": "tanh",
+      "quintic": false
+    },
+    "pnr": 50,
+    "method": "lasso"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 0.0001,
+    "eta": null,
+    "validation_db": 24.678778449928505,
+    "build_fit_validation_sec": 0.1259652809239924,
+    "status": "ok",
+    "converged": true,
+    "iterations": 31236,
+    "kkt_relative": 9.999886011642755e-06,
+    "fit_sec": 3.5161680658347905,
+    "screen_sec": 0.008000552887097001,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 16,
+    "score_min": 0.7208679527685241,
+    "score_max": 0.9877799382954645
+  },
+  "test_observed_db": 24.99584551506696,
+  "test_pim_only_db": 25.01608534694881,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      0
+    ],
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      0
+    ],
+    [
+      "c3",
+      0,
+      5,
+      1
+    ],
+    [
+      "c3",
+      0,
+      5,
+      2
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      2,
+      2,
+      2
+    ],
+    [
+      "c3",
+      3,
+      3,
+      0
+    ],
+    [
+      "c3",
+      3,
+      3,
+      1
+    ],
+    [
+      "c3",
+      3,
+      3,
+      2
+    ],
+    [
+      "c3",
+      4,
+      4,
+      0
+    ],
+    [
+      "c3",
+      4,
+      5,
+      0
+    ],
+    [
+      "c3",
+      4,
+      5,
+      5
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 22.615806316025555,
+  "inference_median_sec": 0.005364529090002179,
+  "inference_us_per_sample": 1.750825421018988,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 152707072,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

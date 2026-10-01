@@ -1,0 +1,160 @@
+{
+  "job": {
+    "repeat": 7,
+    "case": {
+      "name": "tanh_c3",
+      "source": "tanh",
+      "quintic": false
+    },
+    "pnr": 35,
+    "method": "omp"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 20,
+    "eta": null,
+    "validation_db": 23.2038824421897,
+    "build_fit_validation_sec": 0.21886181994341314,
+    "status": "ok",
+    "converged": true,
+    "iterations": 20,
+    "fit_sec": 0.12399282306432724,
+    "screen_sec": 0.018078977009281516,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 20,
+    "score_min": 0.7313010466099041,
+    "score_max": 0.9904767101816228
+  },
+  "test_observed_db": 26.546367042890484,
+  "test_pim_only_db": 27.258720454984456,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      0
+    ],
+    [
+      "c3",
+      0,
+      0,
+      3
+    ],
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      1,
+      1
+    ],
+    [
+      "c3",
+      0,
+      2,
+      5
+    ],
+    [
+      "c3",
+      0,
+      3,
+      0
+    ],
+    [
+      "c3",
+      0,
+      5,
+      0
+    ],
+    [
+      "c3",
+      0,
+      5,
+      2
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      1,
+      5,
+      1
+    ],
+    [
+      "c3",
+      2,
+      2,
+      0
+    ],
+    [
+      "c3",
+      2,
+      5,
+      4
+    ],
+    [
+      "c3",
+      3,
+      3,
+      3
+    ],
+    [
+      "c3",
+      3,
+      3,
+      5
+    ],
+    [
+      "c3",
+      3,
+      5,
+      0
+    ],
+    [
+      "c3",
+      4,
+      4,
+      1
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      2
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 1.659571158932522,
+  "inference_median_sec": 0.011423960793763399,
+  "inference_us_per_sample": 3.728446734256984,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 159989760,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

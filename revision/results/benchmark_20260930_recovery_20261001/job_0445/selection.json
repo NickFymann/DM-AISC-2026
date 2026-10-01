@@ -1,0 +1,59 @@
+{
+  "job": {
+    "repeat": 6,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": 35,
+    "method": "sbl"
+  },
+  "chosen": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": null,
+    "validation_db": 34.62261735781038,
+    "build_fit_validation_sec": 0.2099489790853113,
+    "status": "ok",
+    "converged": true,
+    "iterations": 965,
+    "last_mu_relative_change": 9.987911552707724e-07,
+    "alpha": [
+      1347.1778393140526,
+      221027.57973368184,
+      162.20574856725693,
+      5.16788414208665,
+      14.031760131501677,
+      982373.1048860291,
+      25.442617465638392,
+      6.102889840087397,
+      1.5491905509161625
+    ],
+    "active_local": [
+      5,
+      30,
+      31,
+      35,
+      113,
+      119,
+      120,
+      124,
+      125
+    ],
+    "fit_sec": 0.41179678379558027,
+    "screen_sec": 0.016674331855028868,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 9,
+    "score_min": 0.7075613753451769,
+    "score_max": 0.9915608169684039
+  },
+  "fit_samples": 3064,
+  "validation_samples": 3064,
+  "test_samples": 3064,
+  "stage_absolute_slice": [
+    4112,
+    7176
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "job": {
+    "repeat": 2,
+    "case": {
+      "name": "tanh_c35",
+      "source": "tanh",
+      "quintic": true
+    },
+    "pnr": 50,
+    "method": "ridge"
+  },
+  "chosen": {
+    "memory": 6,
+    "parameter": 0.001,
+    "eta": null,
+    "validation_db": 30.5355775773464,
+    "build_fit_validation_sec": 7.558835550909862,
+    "status": "ok",
+    "converged": true,
+    "iterations": 1,
+    "fit_sec": 33.818518687970936,
+    "screen_sec": 0.6738680461421609,
+    "n_full": 4788,
+    "n_screen": 4788,
+    "n_active": 4788,
+    "score_min": 0.4500902188408416,
+    "score_max": 0.9892993047301709
+  },
+  "fit_samples": 3064,
+  "validation_samples": 3064,
+  "test_samples": 3064,
+  "stage_absolute_slice": [
+    4112,
+    7176
+  ]
+}

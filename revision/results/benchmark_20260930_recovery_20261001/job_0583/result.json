@@ -1,0 +1,125 @@
+{
+  "job": {
+    "repeat": 8,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": 20,
+    "method": "sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": null,
+    "validation_db": 21.148295370651276,
+    "build_fit_validation_sec": 0.1978318989276886,
+    "status": "ok",
+    "converged": true,
+    "iterations": 82,
+    "last_mu_relative_change": 9.53475061546767e-07,
+    "alpha": [
+      157.56856679082938,
+      28.60052042164527,
+      524695.8127104137,
+      2.4521439270556056,
+      7.194552745565474,
+      419902.7305028073,
+      35.41162802530246,
+      30.99098257398695,
+      4.683885134903222,
+      1.1639520500387501
+    ],
+    "active_local": [
+      5,
+      32,
+      33,
+      35,
+      71,
+      77,
+      92,
+      120,
+      124,
+      125
+    ],
+    "fit_sec": 0.1320113050751388,
+    "screen_sec": 0.014521972043439746,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 10,
+    "score_min": 0.7214095705515449,
+    "score_max": 0.9843657801851576
+  },
+  "test_observed_db": 20.078998605411734,
+  "test_pim_only_db": 40.8406058081127,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      2
+    ],
+    [
+      "c3",
+      0,
+      5,
+      3
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      2,
+      2,
+      5
+    ],
+    [
+      "c3",
+      2,
+      3,
+      5
+    ],
+    [
+      "c3",
+      3,
+      3,
+      2
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 2.3934000849258155,
+  "inference_median_sec": 0.005500673083588481,
+  "inference_us_per_sample": 1.7952588392912796,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 158822400,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

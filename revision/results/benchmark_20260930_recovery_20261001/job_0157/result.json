@@ -1,0 +1,117 @@
+{
+  "job": {
+    "repeat": 2,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": 35,
+    "method": "sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": null,
+    "validation_db": 36.49111302778799,
+    "build_fit_validation_sec": 0.19797413097694516,
+    "status": "ok",
+    "converged": true,
+    "iterations": 272,
+    "last_mu_relative_change": 9.830809503536035e-07,
+    "alpha": [
+      1390.2461269269527,
+      137.58721555955415,
+      277984.33609827596,
+      4.9358395972524285,
+      11.826748340128786,
+      966520.5682110469,
+      22.134908645931848,
+      6.069036637215351,
+      1.4240290623896497
+    ],
+    "active_local": [
+      5,
+      31,
+      32,
+      35,
+      113,
+      119,
+      120,
+      124,
+      125
+    ],
+    "fit_sec": 0.19794485601596534,
+    "screen_sec": 0.016231433022767305,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 9,
+    "score_min": 0.6462454342627191,
+    "score_max": 0.9895668302087962
+  },
+  "test_observed_db": 35.71085834113427,
+  "test_pim_only_db": 52.44074112763808,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      1
+    ],
+    [
+      "c3",
+      0,
+      5,
+      2
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      4,
+      4,
+      5
+    ],
+    [
+      "c3",
+      4,
+      5,
+      5
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 1.923893498023972,
+  "inference_median_sec": 0.005266777006909251,
+  "inference_us_per_sample": 1.7189219996440115,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 159039488,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

@@ -1,0 +1,1282 @@
+{
+  "audit_utc": "2026-10-01T12:56:03.340880+00:00",
+  "source_run": "/home/agent/4lchem1st/dm-aisc-2026-revision/benchmark_20260930_recovery_20261001",
+  "expected_jobs": 720,
+  "successful_jobs": 720,
+  "failed_jobs": [],
+  "live_status": {
+    "pid": 410665,
+    "updated_unix": 1790858873.1471982,
+    "elapsed_since_handoff_sec": 12085.648854732513,
+    "completed": 720,
+    "failed": 0,
+    "total": 720,
+    "pending": 0,
+    "max_workers": 3,
+    "scheduler_version": 2,
+    "physical_core_cpu_slots": [
+      0,
+      2,
+      4
+    ],
+    "available_gib": 16.693450927734375,
+    "stop_reason": null,
+    "active": []
+  },
+  "complete_marker": {
+    "status": "complete",
+    "jobs": 720,
+    "failed": 0,
+    "reason": null
+  },
+  "integrity_errors": [],
+  "missing_result_files": [],
+  "stage_counts": [
+    [
+      3064,
+      3064,
+      3064
+    ]
+  ],
+  "independent_stage_seed_count": 30,
+  "noise_seed_count": 30,
+  "candidate_fits_in_completed_jobs": 15840,
+  "coverage": [
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "screen_ridge",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "screen_sbl",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "lasso",
+      "repeats_done": 10,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "omp",
+      "repeats_done": 10,
+      "repeats_required": 10
+    }
+  ],
+  "candidate_status": [
+    {
+      "case": "cubic_c3",
+      "method": "lasso",
+      "memory": 2,
+      "total": 160,
+      "nonconverged": 40,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 120
+    },
+    {
+      "case": "cubic_c3",
+      "method": "lasso",
+      "memory": 4,
+      "total": 160,
+      "nonconverged": 39,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 121
+    },
+    {
+      "case": "cubic_c3",
+      "method": "lasso",
+      "memory": 6,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "omp",
+      "memory": 2,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "omp",
+      "memory": 4,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "omp",
+      "memory": 6,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "ridge",
+      "memory": 2,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "ridge",
+      "memory": 4,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "ridge",
+      "memory": 6,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "sbl",
+      "memory": 2,
+      "total": 120,
+      "converged": 120,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "sbl",
+      "memory": 4,
+      "total": 120,
+      "converged": 116,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "nonconverged": 4
+    },
+    {
+      "case": "cubic_c3",
+      "method": "sbl",
+      "memory": 6,
+      "total": 120,
+      "nonconverged": 20,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 100
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_ridge",
+      "memory": 2,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 264,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_ridge",
+      "memory": 4,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 264,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_ridge",
+      "memory": 6,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 264,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_sbl",
+      "memory": 2,
+      "total": 360,
+      "converged": 360,
+      "screen_reduced": 132,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_sbl",
+      "memory": 4,
+      "total": 360,
+      "converged": 348,
+      "screen_reduced": 132,
+      "eta_001_reduced": 0,
+      "nonconverged": 12
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_sbl",
+      "memory": 6,
+      "total": 360,
+      "nonconverged": 55,
+      "screen_reduced": 132,
+      "eta_001_reduced": 0,
+      "converged": 305
+    },
+    {
+      "case": "tanh_c3",
+      "method": "lasso",
+      "memory": 2,
+      "total": 160,
+      "nonconverged": 40,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 120
+    },
+    {
+      "case": "tanh_c3",
+      "method": "lasso",
+      "memory": 4,
+      "total": 160,
+      "nonconverged": 40,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 120
+    },
+    {
+      "case": "tanh_c3",
+      "method": "lasso",
+      "memory": 6,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "omp",
+      "memory": 2,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "omp",
+      "memory": 4,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "omp",
+      "memory": 6,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "ridge",
+      "memory": 2,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "ridge",
+      "memory": 4,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "ridge",
+      "memory": 6,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "sbl",
+      "memory": 2,
+      "total": 120,
+      "converged": 120,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "sbl",
+      "memory": 4,
+      "total": 120,
+      "converged": 119,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "nonconverged": 1
+    },
+    {
+      "case": "tanh_c3",
+      "method": "sbl",
+      "memory": 6,
+      "total": 120,
+      "converged": 99,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "nonconverged": 21
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_ridge",
+      "memory": 2,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 264,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_ridge",
+      "memory": 4,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 264,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_ridge",
+      "memory": 6,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 264,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_sbl",
+      "memory": 2,
+      "total": 360,
+      "converged": 360,
+      "screen_reduced": 132,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_sbl",
+      "memory": 4,
+      "total": 360,
+      "converged": 358,
+      "screen_reduced": 132,
+      "eta_001_reduced": 0,
+      "nonconverged": 2
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_sbl",
+      "memory": 6,
+      "total": 360,
+      "converged": 302,
+      "screen_reduced": 132,
+      "eta_001_reduced": 0,
+      "nonconverged": 58
+    },
+    {
+      "case": "tanh_c35",
+      "method": "lasso",
+      "memory": 2,
+      "total": 160,
+      "nonconverged": 40,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 120
+    },
+    {
+      "case": "tanh_c35",
+      "method": "lasso",
+      "memory": 4,
+      "total": 160,
+      "nonconverged": 39,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 121
+    },
+    {
+      "case": "tanh_c35",
+      "method": "lasso",
+      "memory": 6,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "omp",
+      "memory": 2,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "omp",
+      "memory": 4,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "omp",
+      "memory": 6,
+      "total": 160,
+      "converged": 160,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "ridge",
+      "memory": 2,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "ridge",
+      "memory": 4,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "ridge",
+      "memory": 6,
+      "total": 240,
+      "converged": 240,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "sbl",
+      "memory": 2,
+      "total": 120,
+      "converged": 106,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "nonconverged": 14
+    },
+    {
+      "case": "tanh_c35",
+      "method": "sbl",
+      "memory": 4,
+      "total": 120,
+      "converged": 118,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "nonconverged": 2
+    },
+    {
+      "case": "tanh_c35",
+      "method": "sbl",
+      "memory": 6,
+      "total": 120,
+      "converged": 96,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "nonconverged": 24
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_ridge",
+      "memory": 2,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 480,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_ridge",
+      "memory": 4,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 480,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_ridge",
+      "memory": 6,
+      "total": 720,
+      "converged": 720,
+      "screen_reduced": 480,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_sbl",
+      "memory": 2,
+      "total": 360,
+      "converged": 345,
+      "screen_reduced": 240,
+      "eta_001_reduced": 0,
+      "nonconverged": 15
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_sbl",
+      "memory": 4,
+      "total": 360,
+      "converged": 356,
+      "screen_reduced": 240,
+      "eta_001_reduced": 0,
+      "nonconverged": 4
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_sbl",
+      "memory": 6,
+      "total": 360,
+      "converged": 294,
+      "screen_reduced": 240,
+      "eta_001_reduced": 0,
+      "nonconverged": 66
+    }
+  ],
+  "selection_boundaries": [
+    {
+      "case": "cubic_c3",
+      "method": "lasso",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 40,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "cubic_c3",
+      "method": "omp",
+      "selected_memories": {
+        "6": 39,
+        "4": 1
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 9,
+      "memory_upper_edge": 39
+    },
+    {
+      "case": "cubic_c3",
+      "method": "ridge",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 19,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "cubic_c3",
+      "method": "sbl",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 40,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_ridge",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 19,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_sbl",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 40,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "tanh_c3",
+      "method": "lasso",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 38,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "tanh_c3",
+      "method": "omp",
+      "selected_memories": {
+        "6": 36,
+        "4": 4
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 4,
+      "parameter_upper_edge": 2,
+      "memory_upper_edge": 36
+    },
+    {
+      "case": "tanh_c3",
+      "method": "ridge",
+      "selected_memories": {
+        "6": 39,
+        "4": 1
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 4,
+      "parameter_upper_edge": 6,
+      "memory_upper_edge": 39
+    },
+    {
+      "case": "tanh_c3",
+      "method": "sbl",
+      "selected_memories": {
+        "4": 11,
+        "6": 29
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 27,
+      "memory_upper_edge": 29
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_ridge",
+      "selected_memories": {
+        "6": 36,
+        "4": 4
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 4,
+      "parameter_upper_edge": 7,
+      "memory_upper_edge": 36
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_sbl",
+      "selected_memories": {
+        "4": 13,
+        "6": 27
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 29,
+      "memory_upper_edge": 27
+    },
+    {
+      "case": "tanh_c35",
+      "method": "lasso",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 40,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "tanh_c35",
+      "method": "omp",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 3,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "tanh_c35",
+      "method": "ridge",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 40,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "tanh_c35",
+      "method": "sbl",
+      "selected_memories": {
+        "6": 27,
+        "4": 13
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 35,
+      "memory_upper_edge": 27
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_ridge",
+      "selected_memories": {
+        "6": 40
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 35,
+      "memory_upper_edge": 40
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_sbl",
+      "selected_memories": {
+        "6": 34,
+        "4": 6
+      },
+      "selected_jobs": 40,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 34,
+      "memory_upper_edge": 34
+    }
+  ],
+  "selected_sbl_trajectories": 240,
+  "eta_001_paired_controls": {
+    "candidate_pairs": 3240,
+    "max_validation_db_difference": 0.0,
+    "stage_count_or_convergence_mismatches": 0
+  },
+  "environment_supplement": {
+    "logical_cpus": 8,
+    "physical_cores": 4,
+    "ram_bytes": 19952984064,
+    "psutil_version": "7.2.2",
+    "cpu_model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx",
+    "numpy_build_config": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.3.0\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"c++\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    },\n    \"build\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    }\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.34.106.0\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas64/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas64/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\"\n    },\n    \"lapack\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.34.106.0\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas64/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas64/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/tmp/build-env-1yb2qye7/bin/python\",\n    \"version\": \"3.14\"\n  },\n  \"SIMD Extensions\": {\n    \"baseline\": [\n      \"X86_V2\"\n    ],\n    \"found\": [\n      \"X86_V3\"\n    ],\n    \"not found\": [\n      \"X86_V4\",\n      \"AVX512_ICL\",\n      \"AVX512_SPR\"\n    ]\n  }\n}\n",
+    "scipy_build_config": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.2.9\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"c++\"\n    },\n    \"fortran\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"gfortran\"\n    },\n    \"pythran\": {\n      \"version\": \"0.19.0\",\n      \"include directory\": \"../../../tmp/build-env-i6f9al3g/lib/python3.14/site-packages/pythran\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    },\n    \"build\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    },\n    \"cross-compiled\": false\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.31.dev\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas32/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas32/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.31.dev DYNAMIC_ARCH NO_AFFINITY SkylakeX MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\",\n      \"has ilp64\": false,\n      \"cython blas ilp64\": false\n    },\n    \"lapack\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.31.dev\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas32/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas32/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.31.dev DYNAMIC_ARCH NO_AFFINITY SkylakeX MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\",\n      \"has ilp64\": false\n    },\n    \"pybind11\": {\n      \"name\": \"pybind11\",\n      \"version\": \"3.0.4\",\n      \"detection method\": \"config-tool\",\n      \"include directory\": \"unknown\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/tmp/build-env-i6f9al3g/bin/python\",\n    \"version\": \"3.14\"\n  }\n}\n"
+  },
+  "test_scores_used_for_audit_decisions": false
+}

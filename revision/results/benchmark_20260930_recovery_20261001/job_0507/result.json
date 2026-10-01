@@ -1,0 +1,101 @@
+{
+  "job": {
+    "repeat": 7,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": null,
+    "method": "screen_sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": 0.01,
+    "validation_db": 51.79088069783398,
+    "build_fit_validation_sec": 0.21137570892460644,
+    "status": "ok",
+    "converged": true,
+    "iterations": 167,
+    "last_mu_relative_change": 6.4462558537364e-07,
+    "alpha": [
+      646.3202715432669,
+      6.890697056900995,
+      6.153526083608331,
+      435.00671715641846,
+      4.019166268484621,
+      44.884408959528514,
+      0.929092164799954
+    ],
+    "active_local": [
+      11,
+      34,
+      35,
+      95,
+      118,
+      120,
+      125
+    ],
+    "fit_sec": 0.17915019602514803,
+    "screen_sec": 0.01808701502159238,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 7,
+    "score_min": 0.7325174308520117,
+    "score_max": 0.9918448280934526
+  },
+  "test_observed_db": 51.356210868793625,
+  "test_pim_only_db": 51.356210868793625,
+  "support": [
+    [
+      "c3",
+      0,
+      1,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      4
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      3,
+      3,
+      5
+    ],
+    [
+      "c3",
+      4,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 3.9421277849469334,
+  "inference_median_sec": 0.005577750038355589,
+  "inference_us_per_sample": 1.8204145033797614,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 158756864,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

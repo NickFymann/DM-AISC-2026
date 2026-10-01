@@ -1,0 +1,43 @@
+{
+  "index": 12,
+  "job": {
+    "repeat": 0,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": 35,
+    "method": "ridge"
+  },
+  "memory": 6,
+  "parameter": 1e-06,
+  "eta": null,
+  "dictionary_sec": 0.06971900700591505,
+  "fit_sec": 0.051599560072645545,
+  "prepare_screen_sec": 0.010993310948833823,
+  "train_total_sec": 0.12131856707856059,
+  "n_full": 126,
+  "n_screen": 126,
+  "n_active": 126,
+  "iterations": 1,
+  "converged": true,
+  "inference_seconds": [
+    0.0654073259793222,
+    0.065187803003937,
+    0.06532551208510995,
+    0.06486742990091443,
+    0.06518498808145523,
+    0.06368440389633179,
+    0.06314899702556431
+  ],
+  "inference_median_us_per_sample": 21.27447391692403,
+  "process_peak_mib": 151.76171875,
+  "peak_scope": "Linux process high-water RSS; imports, records, one dictionary/fit, and inference; excludes hyperparameter search",
+  "coefficient_relative_error": 0.0,
+  "support_equal": true,
+  "cpu_slot": 0,
+  "threads": 1,
+  "test_target_read": false,
+  "status": "ok"
+}

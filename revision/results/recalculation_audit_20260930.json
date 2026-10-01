@@ -1,0 +1,1291 @@
+{
+  "audit_utc": "2026-09-30T19:54:14.514265+00:00",
+  "source_run": "/home/agent/4lchem1st/dm-aisc-2026-revision/benchmark_20260930",
+  "expected_jobs": 720,
+  "successful_jobs": 72,
+  "failed_jobs": [],
+  "live_status": {
+    "pid": 3873693,
+    "updated_unix": 1790798052.7890494,
+    "elapsed_since_handoff_sec": 947.2492125034332,
+    "completed": 72,
+    "failed": 0,
+    "total": 720,
+    "pending": 644,
+    "max_workers": 4,
+    "scheduler_version": 2,
+    "physical_core_cpu_slots": [
+      0,
+      2,
+      4,
+      6
+    ],
+    "available_gib": 9.598091125488281,
+    "stop_reason": null,
+    "active": [
+      {
+        "index": 57,
+        "pid": 3867254,
+        "elapsed_sec": 1374.3293192386627,
+        "adopted": true,
+        "cpu_slot": 4
+      },
+      {
+        "index": 61,
+        "pid": 3877716,
+        "elapsed_sec": 698.9279329776764,
+        "adopted": false,
+        "cpu_slot": 2
+      },
+      {
+        "index": 64,
+        "pid": 3882651,
+        "elapsed_sec": 364.5484871864319,
+        "adopted": false,
+        "cpu_slot": 0
+      },
+      {
+        "index": 66,
+        "pid": 3886948,
+        "elapsed_sec": 68.07905983924866,
+        "adopted": false,
+        "cpu_slot": 6
+      }
+    ]
+  },
+  "complete_marker": null,
+  "integrity_errors": [],
+  "missing_result_files": [],
+  "stage_counts": [
+    [
+      3064,
+      3064,
+      3064
+    ]
+  ],
+  "independent_stage_seed_count": 30,
+  "noise_seed_count": 30,
+  "candidate_fits_in_completed_jobs": 1617,
+  "coverage": [
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "ridge",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "sbl",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "screen_ridge",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "screen_sbl",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "lasso",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "None",
+      "method": "omp",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "ridge",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "sbl",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "screen_ridge",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "screen_sbl",
+      "repeats_done": 2,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "20",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "screen_sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "35",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "screen_sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "cubic_c3",
+      "pnr": "50",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "screen_sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "None",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "screen_sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "20",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "screen_sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "35",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "screen_sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c3",
+      "pnr": "50",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "screen_sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "None",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "sbl",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "screen_sbl",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "lasso",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "20",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "sbl",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "screen_ridge",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "screen_sbl",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "lasso",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "35",
+      "method": "omp",
+      "repeats_done": 1,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "ridge",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "sbl",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "screen_ridge",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "screen_sbl",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "lasso",
+      "repeats_done": 0,
+      "repeats_required": 10
+    },
+    {
+      "case": "tanh_c35",
+      "pnr": "50",
+      "method": "omp",
+      "repeats_done": 0,
+      "repeats_required": 10
+    }
+  ],
+  "candidate_status": [
+    {
+      "case": "cubic_c3",
+      "method": "lasso",
+      "memory": 2,
+      "total": 20,
+      "nonconverged": 5,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 15
+    },
+    {
+      "case": "cubic_c3",
+      "method": "lasso",
+      "memory": 4,
+      "total": 20,
+      "nonconverged": 5,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 15
+    },
+    {
+      "case": "cubic_c3",
+      "method": "lasso",
+      "memory": 6,
+      "total": 20,
+      "converged": 20,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "omp",
+      "memory": 2,
+      "total": 20,
+      "converged": 20,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "omp",
+      "memory": 4,
+      "total": 20,
+      "converged": 20,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "omp",
+      "memory": 6,
+      "total": 20,
+      "converged": 20,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "ridge",
+      "memory": 2,
+      "total": 36,
+      "converged": 36,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "ridge",
+      "memory": 4,
+      "total": 36,
+      "converged": 36,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "ridge",
+      "memory": 6,
+      "total": 36,
+      "converged": 36,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "sbl",
+      "memory": 2,
+      "total": 18,
+      "converged": 18,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "sbl",
+      "memory": 4,
+      "total": 18,
+      "converged": 18,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "sbl",
+      "memory": 6,
+      "total": 18,
+      "nonconverged": 5,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 13
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_ridge",
+      "memory": 2,
+      "total": 108,
+      "converged": 108,
+      "screen_reduced": 36,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_ridge",
+      "memory": 4,
+      "total": 108,
+      "converged": 108,
+      "screen_reduced": 36,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_ridge",
+      "memory": 6,
+      "total": 108,
+      "converged": 108,
+      "screen_reduced": 36,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_sbl",
+      "memory": 2,
+      "total": 54,
+      "converged": 54,
+      "screen_reduced": 18,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_sbl",
+      "memory": 4,
+      "total": 54,
+      "converged": 54,
+      "screen_reduced": 18,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_sbl",
+      "memory": 6,
+      "total": 54,
+      "nonconverged": 13,
+      "screen_reduced": 18,
+      "eta_001_reduced": 0,
+      "converged": 41
+    },
+    {
+      "case": "tanh_c3",
+      "method": "lasso",
+      "memory": 2,
+      "total": 16,
+      "nonconverged": 4,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 12
+    },
+    {
+      "case": "tanh_c3",
+      "method": "lasso",
+      "memory": 4,
+      "total": 16,
+      "nonconverged": 4,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 12
+    },
+    {
+      "case": "tanh_c3",
+      "method": "lasso",
+      "memory": 6,
+      "total": 16,
+      "converged": 16,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "omp",
+      "memory": 2,
+      "total": 16,
+      "converged": 16,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "omp",
+      "memory": 4,
+      "total": 16,
+      "converged": 16,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "omp",
+      "memory": 6,
+      "total": 16,
+      "converged": 16,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "ridge",
+      "memory": 2,
+      "total": 24,
+      "converged": 24,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "ridge",
+      "memory": 4,
+      "total": 24,
+      "converged": 24,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "ridge",
+      "memory": 6,
+      "total": 24,
+      "converged": 24,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "sbl",
+      "memory": 2,
+      "total": 12,
+      "converged": 12,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "sbl",
+      "memory": 4,
+      "total": 12,
+      "converged": 12,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "sbl",
+      "memory": 6,
+      "total": 12,
+      "converged": 10,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "nonconverged": 2
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_ridge",
+      "memory": 2,
+      "total": 72,
+      "converged": 72,
+      "screen_reduced": 24,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_ridge",
+      "memory": 4,
+      "total": 72,
+      "converged": 72,
+      "screen_reduced": 24,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_ridge",
+      "memory": 6,
+      "total": 72,
+      "converged": 72,
+      "screen_reduced": 24,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_sbl",
+      "memory": 2,
+      "total": 36,
+      "converged": 36,
+      "screen_reduced": 12,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_sbl",
+      "memory": 4,
+      "total": 36,
+      "converged": 36,
+      "screen_reduced": 12,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_sbl",
+      "memory": 6,
+      "total": 36,
+      "converged": 30,
+      "screen_reduced": 12,
+      "eta_001_reduced": 0,
+      "nonconverged": 6
+    },
+    {
+      "case": "tanh_c35",
+      "method": "lasso",
+      "memory": 2,
+      "total": 8,
+      "nonconverged": 2,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 6
+    },
+    {
+      "case": "tanh_c35",
+      "method": "lasso",
+      "memory": 4,
+      "total": 8,
+      "nonconverged": 2,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0,
+      "converged": 6
+    },
+    {
+      "case": "tanh_c35",
+      "method": "lasso",
+      "memory": 6,
+      "total": 8,
+      "converged": 8,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "omp",
+      "memory": 2,
+      "total": 12,
+      "converged": 12,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "omp",
+      "memory": 4,
+      "total": 12,
+      "converged": 12,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "omp",
+      "memory": 6,
+      "total": 12,
+      "converged": 12,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "ridge",
+      "memory": 2,
+      "total": 18,
+      "converged": 18,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "ridge",
+      "memory": 4,
+      "total": 18,
+      "converged": 18,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "ridge",
+      "memory": 6,
+      "total": 18,
+      "converged": 18,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "sbl",
+      "memory": 2,
+      "total": 6,
+      "converged": 6,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "sbl",
+      "memory": 4,
+      "total": 6,
+      "converged": 6,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "sbl",
+      "memory": 6,
+      "total": 6,
+      "converged": 6,
+      "screen_reduced": 0,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_ridge",
+      "memory": 2,
+      "total": 54,
+      "converged": 54,
+      "screen_reduced": 36,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_ridge",
+      "memory": 4,
+      "total": 54,
+      "converged": 54,
+      "screen_reduced": 36,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_ridge",
+      "memory": 6,
+      "total": 54,
+      "converged": 54,
+      "screen_reduced": 36,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_sbl",
+      "memory": 2,
+      "total": 9,
+      "converged": 9,
+      "screen_reduced": 6,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_sbl",
+      "memory": 4,
+      "total": 9,
+      "converged": 9,
+      "screen_reduced": 6,
+      "eta_001_reduced": 0
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_sbl",
+      "memory": 6,
+      "total": 9,
+      "converged": 9,
+      "screen_reduced": 6,
+      "eta_001_reduced": 0
+    }
+  ],
+  "selection_boundaries": [
+    {
+      "case": "cubic_c3",
+      "method": "lasso",
+      "selected_memories": {
+        "6": 5
+      },
+      "selected_jobs": 5,
+      "parameter_lower_edge": 5,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 5
+    },
+    {
+      "case": "cubic_c3",
+      "method": "omp",
+      "selected_memories": {
+        "6": 5
+      },
+      "selected_jobs": 5,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 1,
+      "memory_upper_edge": 5
+    },
+    {
+      "case": "cubic_c3",
+      "method": "ridge",
+      "selected_memories": {
+        "6": 6
+      },
+      "selected_jobs": 6,
+      "parameter_lower_edge": 2,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 6
+    },
+    {
+      "case": "cubic_c3",
+      "method": "sbl",
+      "selected_memories": {
+        "6": 6
+      },
+      "selected_jobs": 6,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 6,
+      "memory_upper_edge": 6
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_ridge",
+      "selected_memories": {
+        "6": 6
+      },
+      "selected_jobs": 6,
+      "parameter_lower_edge": 2,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 6
+    },
+    {
+      "case": "cubic_c3",
+      "method": "screen_sbl",
+      "selected_memories": {
+        "6": 6
+      },
+      "selected_jobs": 6,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 6,
+      "memory_upper_edge": 6
+    },
+    {
+      "case": "tanh_c3",
+      "method": "lasso",
+      "selected_memories": {
+        "6": 4
+      },
+      "selected_jobs": 4,
+      "parameter_lower_edge": 4,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 4
+    },
+    {
+      "case": "tanh_c3",
+      "method": "omp",
+      "selected_memories": {
+        "6": 4
+      },
+      "selected_jobs": 4,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 4
+    },
+    {
+      "case": "tanh_c3",
+      "method": "ridge",
+      "selected_memories": {
+        "6": 4
+      },
+      "selected_jobs": 4,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 4,
+      "memory_upper_edge": 4
+    },
+    {
+      "case": "tanh_c3",
+      "method": "sbl",
+      "selected_memories": {
+        "4": 3,
+        "6": 1
+      },
+      "selected_jobs": 4,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 4,
+      "memory_upper_edge": 1
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_ridge",
+      "selected_memories": {
+        "6": 4
+      },
+      "selected_jobs": 4,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 4,
+      "memory_upper_edge": 4
+    },
+    {
+      "case": "tanh_c3",
+      "method": "screen_sbl",
+      "selected_memories": {
+        "4": 3,
+        "6": 1
+      },
+      "selected_jobs": 4,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 4,
+      "memory_upper_edge": 1
+    },
+    {
+      "case": "tanh_c35",
+      "method": "lasso",
+      "selected_memories": {
+        "6": 2
+      },
+      "selected_jobs": 2,
+      "parameter_lower_edge": 2,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 2
+    },
+    {
+      "case": "tanh_c35",
+      "method": "omp",
+      "selected_memories": {
+        "6": 3
+      },
+      "selected_jobs": 3,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 0,
+      "memory_upper_edge": 3
+    },
+    {
+      "case": "tanh_c35",
+      "method": "ridge",
+      "selected_memories": {
+        "6": 3
+      },
+      "selected_jobs": 3,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 3,
+      "memory_upper_edge": 3
+    },
+    {
+      "case": "tanh_c35",
+      "method": "sbl",
+      "selected_memories": {
+        "6": 2
+      },
+      "selected_jobs": 2,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 1,
+      "memory_upper_edge": 2
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_ridge",
+      "selected_memories": {
+        "6": 3
+      },
+      "selected_jobs": 3,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 3,
+      "memory_upper_edge": 3
+    },
+    {
+      "case": "tanh_c35",
+      "method": "screen_sbl",
+      "selected_memories": {
+        "6": 1
+      },
+      "selected_jobs": 1,
+      "parameter_lower_edge": 0,
+      "parameter_upper_edge": 1,
+      "memory_upper_edge": 1
+    }
+  ],
+  "selected_sbl_trajectories": 23,
+  "eta_001_paired_controls": {
+    "candidate_pairs": 333,
+    "max_validation_db_difference": 0.0,
+    "stage_count_or_convergence_mismatches": 0
+  },
+  "environment_supplement": {
+    "logical_cpus": 8,
+    "physical_cores": 4,
+    "ram_bytes": 19952984064,
+    "psutil_version": "7.2.2",
+    "cpu_model": "AMD Ryzen 5 2500U with Radeon Vega Mobile Gfx",
+    "numpy_build_config": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.3.0\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"c++\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    },\n    \"build\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    }\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.34.106.0\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas64/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas64/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\"\n    },\n    \"lapack\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.34.106.0\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas64/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas64/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.34.106.0  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/tmp/build-env-1yb2qye7/bin/python\",\n    \"version\": \"3.14\"\n  },\n  \"SIMD Extensions\": {\n    \"baseline\": [\n      \"X86_V2\"\n    ],\n    \"found\": [\n      \"X86_V3\"\n    ],\n    \"not found\": [\n      \"X86_V4\",\n      \"AVX512_ICL\",\n      \"AVX512_SPR\"\n    ]\n  }\n}\n",
+    "scipy_build_config": "{\n  \"Compilers\": {\n    \"c\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"cc\"\n    },\n    \"cython\": {\n      \"name\": \"cython\",\n      \"linker\": \"cython\",\n      \"version\": \"3.2.9\",\n      \"commands\": \"cython\"\n    },\n    \"c++\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"c++\"\n    },\n    \"fortran\": {\n      \"name\": \"gcc\",\n      \"linker\": \"ld.bfd\",\n      \"version\": \"14.2.1\",\n      \"commands\": \"gfortran\"\n    },\n    \"pythran\": {\n      \"version\": \"0.19.0\",\n      \"include directory\": \"../../../tmp/build-env-i6f9al3g/lib/python3.14/site-packages/pythran\"\n    }\n  },\n  \"Machine Information\": {\n    \"host\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    },\n    \"build\": {\n      \"cpu\": \"x86_64\",\n      \"family\": \"x86_64\",\n      \"endian\": \"little\",\n      \"system\": \"linux\"\n    },\n    \"cross-compiled\": false\n  },\n  \"Build Dependencies\": {\n    \"blas\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.31.dev\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas32/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas32/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.31.dev DYNAMIC_ARCH NO_AFFINITY SkylakeX MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\",\n      \"has ilp64\": false,\n      \"cython blas ilp64\": false\n    },\n    \"lapack\": {\n      \"name\": \"scipy-openblas\",\n      \"found\": true,\n      \"version\": \"0.3.31.dev\",\n      \"detection method\": \"pkgconfig\",\n      \"include directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas32/include\",\n      \"lib directory\": \"/opt/_internal/cpython-3.14.6/lib/python3.14/site-packages/scipy_openblas32/lib\",\n      \"openblas configuration\": \"OpenBLAS 0.3.31.dev DYNAMIC_ARCH NO_AFFINITY SkylakeX MAX_THREADS=64\",\n      \"pc file directory\": \"/project/.openblas\",\n      \"has ilp64\": false\n    },\n    \"pybind11\": {\n      \"name\": \"pybind11\",\n      \"version\": \"3.0.4\",\n      \"detection method\": \"config-tool\",\n      \"include directory\": \"unknown\"\n    }\n  },\n  \"Python Information\": {\n    \"path\": \"/tmp/build-env-i6f9al3g/bin/python\",\n    \"version\": \"3.14\"\n  }\n}\n"
+  },
+  "test_scores_used_for_audit_decisions": false
+}

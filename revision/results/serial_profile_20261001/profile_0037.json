@@ -1,0 +1,43 @@
+{
+  "index": 37,
+  "job": {
+    "repeat": 0,
+    "case": {
+      "name": "tanh_c3",
+      "source": "tanh",
+      "quintic": false
+    },
+    "pnr": 35,
+    "method": "sbl"
+  },
+  "memory": 4,
+  "parameter": 1000000,
+  "eta": null,
+  "dictionary_sec": 0.02203975198790431,
+  "fit_sec": 0.06252976204268634,
+  "prepare_screen_sec": 0.0025106030516326427,
+  "train_total_sec": 0.08456951403059065,
+  "n_full": 40,
+  "n_screen": 40,
+  "n_active": 39,
+  "iterations": 225,
+  "converged": true,
+  "inference_seconds": [
+    0.018609489081427455,
+    0.018883453914895654,
+    0.018896899186074734,
+    0.01880377414636314,
+    0.018507526023313403,
+    0.0184732130728662,
+    0.018511193804442883
+  ],
+  "inference_median_us_per_sample": 6.0735930422413364,
+  "process_peak_mib": 128.859375,
+  "peak_scope": "Linux process high-water RSS; imports, records, one dictionary/fit, and inference; excludes hyperparameter search",
+  "coefficient_relative_error": 0.0,
+  "support_equal": true,
+  "cpu_slot": 0,
+  "threads": 1,
+  "test_target_read": false,
+  "status": "ok"
+}

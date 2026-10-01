@@ -1,0 +1,100 @@
+{
+  "job": {
+    "repeat": 9,
+    "case": {
+      "name": "tanh_c3",
+      "source": "tanh",
+      "quintic": false
+    },
+    "pnr": null,
+    "method": "omp"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 10,
+    "eta": null,
+    "validation_db": 25.934647322622297,
+    "build_fit_validation_sec": 0.7023726119659841,
+    "status": "ok",
+    "converged": true,
+    "iterations": 10,
+    "fit_sec": 0.06763670197688043,
+    "screen_sec": 0.024804661981761456,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 10,
+    "score_min": 0.7028590966320492,
+    "score_max": 0.989415900005188
+  },
+  "test_observed_db": 25.74716121752371,
+  "test_pim_only_db": 25.74716121752371,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      0
+    ],
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      0
+    ],
+    [
+      "c3",
+      0,
+      5,
+      2
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      2,
+      3,
+      0
+    ],
+    [
+      "c3",
+      3,
+      3,
+      5
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      2
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 2.114859506022185,
+  "inference_median_sec": 0.006852906895801425,
+  "inference_us_per_sample": 2.236588412467828,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 159834112,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

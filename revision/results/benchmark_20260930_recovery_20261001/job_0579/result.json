@@ -1,0 +1,125 @@
+{
+  "job": {
+    "repeat": 8,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": null,
+    "method": "screen_sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": 0.8,
+    "validation_db": 52.678403771351334,
+    "build_fit_validation_sec": 0.2332639570813626,
+    "status": "ok",
+    "converged": true,
+    "iterations": 201,
+    "last_mu_relative_change": 9.992061103425135e-07,
+    "alpha": [
+      1022.9258605396212,
+      299609.27830835857,
+      82.87458081828525,
+      4.549666435394463,
+      13.094446446136791,
+      975631.68487317,
+      31.41265540182749,
+      283515.5038389556,
+      6.821415840637038,
+      1.1638796956984592
+    ],
+    "active_local": [
+      1,
+      23,
+      24,
+      27,
+      103,
+      108,
+      110,
+      111,
+      114,
+      115
+    ],
+    "fit_sec": 0.16081906598992646,
+    "screen_sec": 0.02096220408566296,
+    "n_full": 126,
+    "n_screen": 116,
+    "n_active": 10,
+    "score_min": 0.7260970136016317,
+    "score_max": 0.9897410946150191
+  },
+  "test_observed_db": 52.17045466173994,
+  "test_pim_only_db": 52.17045466173994,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      1
+    ],
+    [
+      "c3",
+      0,
+      5,
+      2
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      4,
+      4,
+      5
+    ],
+    [
+      "c3",
+      4,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      1
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 6.375074876938015,
+  "inference_median_sec": 0.006796753033995628,
+  "inference_us_per_sample": 2.2182614340716804,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 159191040,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "check": "All 4578 frozen snapshot files preserve SHA-256",
+      "passed": true
+    },
+    {
+      "check": "Original article preserved",
+      "passed": true
+    },
+    {
+      "check": "Supplied experiment description preserved",
+      "passed": true
+    },
+    {
+      "check": "Complete audit: 720 successful, zero errors",
+      "passed": true
+    },
+    {
+      "check": "All 72 cells have ten repeats",
+      "passed": true
+    },
+    {
+      "check": "Selected CSV has 720 rows",
+      "passed": true
+    },
+    {
+      "check": "Independent standard-library mean/SD check for all cells; no dependent-pair Jaccard interval",
+      "passed": true
+    },
+    {
+      "check": "All 15840 per-configuration stage counts exported",
+      "passed": true
+    },
+    {
+      "check": "All 536 nonconverged candidates retained",
+      "passed": true
+    },
+    {
+      "check": "All 9720 matched validation controls exported",
+      "passed": true
+    },
+    {
+      "check": "Inactive-screen controls preserve counts and all converged validation scores",
+      "passed": true
+    },
+    {
+      "check": "All 18 serial profiles exactly reproduce the frozen models",
+      "passed": true
+    },
+    {
+      "check": "Serial measurement scope and repeat counts verified",
+      "passed": true
+    },
+    {
+      "check": "Article contains completed benchmark rather than draft/pilot placeholders",
+      "passed": true
+    },
+    {
+      "check": "Paper orders the conjugated c,d factors",
+      "passed": true
+    },
+    {
+      "check": "PDF has no overfull boxes or undefined references/citations",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "raw_files_verified": 4578,
+  "frozen_scientific_code_changed": false,
+  "source_sha256": {
+    "summarize.py": "b533d5de0c23d3f5e18db76c81c7684bc4c98458aed0bb559cf580c29b2d56f5",
+    "render_results.py": "8b76e2d688aac971f77460f6b77627e47f2530658d4b5fe1d2a8f5a2951c2ce3",
+    "profile_selected.py": "697292f02a0f90ee2e70947cefa9577a55b69b8c66d519b166fd1480dd4cdbbb",
+    "test_summary.py": "f9727ecdd6611af7d2330bedf77cc993392351a15c0d5c0300f434f1c4dcee46",
+    "test_revision.py": "a32eae84110e9d8ffcae9f96989639c0d1b7da28ac0e0b1b613378b197d8db26",
+    "verify_final_revision.py": "77085d6704a0b06408082e3b137350fa5f5850fb016de9b1b16b92ad7ce4f29a"
+  },
+  "paper_sha256": "c41a1f73d3707734ca5dca16258b5c263dde2ce99a28bb16a994362a2c324861",
+  "pdf_sha256": "cbf59afde179f3b06fa8621525553a49c06f2565dab7ae2030dfb6eaee339121",
+  "limitations": [
+    "Synthetic fixed path and finite grids",
+    "Serial profile is one refit per representative case/method",
+    "No calibrated predictive intervals",
+    "No measured PIM"
+  ]
+}

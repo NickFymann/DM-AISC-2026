@@ -1,0 +1,10 @@
+{
+  "repeat": 1,
+  "case": {
+    "name": "tanh_c3",
+    "source": "tanh",
+    "quintic": false
+  },
+  "pnr": 35,
+  "method": "omp"
+}

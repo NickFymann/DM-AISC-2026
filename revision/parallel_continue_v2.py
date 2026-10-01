@@ -177,6 +177,7 @@ def execute(args):
     env['PYTHONDONTWRITEBYTECODE'] = '1'
     start = time.time()
     deadline = handoff['original_started'] + cfg['max_run_hours'] * 3600
+    task_timeout = args.task_timeout_sec or cfg['task_timeout_sec']
     provenance_path = run / 'timing_provenance.json'
     previous_provenance = read(provenance_path) if provenance_path.exists() else None
     dump(provenance_path, dict(
@@ -188,6 +189,8 @@ def execute(args):
         max_workers=args.workers, blas_threads_per_worker=1,
         completed_indices_at_transition=initial_indices,
         physical_core_cpu_slots=slots[:args.workers], headroom_gib=args.headroom_gib,
+        task_timeout_sec=task_timeout, original_task_timeout_sec=cfg['task_timeout_sec'],
+        automatic_summary=not args.skip_summary,
         performance_comparison_valid=False,
         note='Concurrent workloads affect wall-clock timing. Use separate serial profiling for efficiency claims. '
              'Workers, seeds, splits, grids and scientific results are unchanged. '
@@ -198,7 +201,7 @@ def execute(args):
             process = item['process']
             running = alive(process, item['created'])
             elapsed = time.time() - item['started']
-            timed_out = running and elapsed > cfg['task_timeout_sec']
+            timed_out = running and elapsed > task_timeout
             if timed_out:
                 process.terminate()
                 try:
@@ -264,9 +267,13 @@ def execute(args):
     complete = len(outcomes) == len(jobs) and all(r['status'] == 'ok' for r in outcomes.values())
     dump(run / 'completion.json', dict(status='complete' if complete else 'incomplete',
          jobs=len(outcomes), failed=sum(r['status'] != 'ok' for r in outcomes.values()), reason=reason))
-    if complete:
+    if complete and not args.skip_summary:
         # Keep frozen aggregation code; separate provenance disallows timing claims.
         subprocess.run([sys.executable, str(run / 'source/summarize.py'), str(run)], env=env, check=True)
+    elif complete:
+        dump(run / 'aggregation_deferred.json', dict(
+            reason='Run integrity audit and fix dependent-pair Jaccard intervals before final aggregation.',
+            raw_benchmark_complete=True, revision_complete=False))
     return 0 if complete else 1
 
 
@@ -276,9 +283,14 @@ def main():
     parser.add_argument('--handoff', type=Path, required=True)
     parser.add_argument('--workers', type=int, default=4)
     parser.add_argument('--headroom-gib', type=float, default=2.5)
+    parser.add_argument('--task-timeout-sec', type=int,
+                        help='Scheduling override only; the frozen scientific config remains unchanged')
+    parser.add_argument('--skip-summary', action='store_true')
     args = parser.parse_args()
     if not 1 <= args.workers <= 4 or args.headroom_gib < 2.5:
         parser.error('Validated envelope: 1..4 workers and at least 2.5 GiB headroom')
+    if args.task_timeout_sec is not None and args.task_timeout_sec <= 0:
+        parser.error('Task timeout must be positive')
     try:
         return execute(args)
     except Exception as exc:

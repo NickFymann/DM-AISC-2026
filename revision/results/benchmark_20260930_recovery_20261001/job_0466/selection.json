@@ -1,0 +1,37 @@
+{
+  "job": {
+    "repeat": 6,
+    "case": {
+      "name": "tanh_c3",
+      "source": "tanh",
+      "quintic": false
+    },
+    "pnr": 20,
+    "method": "lasso"
+  },
+  "chosen": {
+    "memory": 6,
+    "parameter": 0.0001,
+    "eta": null,
+    "validation_db": 19.03560807437956,
+    "build_fit_validation_sec": 0.19231631606817245,
+    "status": "ok",
+    "converged": true,
+    "iterations": 23290,
+    "kkt_relative": 3.7616276144631806e-06,
+    "fit_sec": 5.80494249984622,
+    "screen_sec": 0.011597882956266403,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 13,
+    "score_min": 0.7070463556328787,
+    "score_max": 0.9877733263941323
+  },
+  "fit_samples": 3064,
+  "validation_samples": 3064,
+  "test_samples": 3064,
+  "stage_absolute_slice": [
+    4112,
+    7176
+  ]
+}

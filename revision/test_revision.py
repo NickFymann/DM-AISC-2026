@@ -58,6 +58,21 @@ class RevisionTests(unittest.TestCase):
         self.assertEqual(len(ex.screen(unit,target,None)[0]),4)
         np.testing.assert_allclose(norms,np.linalg.norm(x,axis=0))
 
+    def test_quintic_paper_index_ordering(self):
+        record=ex.generate('tanh',12345,54321,None)
+        # Paper: conjugated c,d; stored key: unconjugated e, then c,d.
+        a,b,c,d,e=0,1,2,3,1
+        key=('q5b',a,b,e,c,d)
+        self.assertIn(key,ex.terms(4,True))
+        def delay(x,k):
+            out=np.zeros_like(x)
+            out[k:]=x[:len(x)-k]
+            return out
+        raw=(delay(record.lo,a)*delay(record.lo,b)*delay(record.hi,c).conj()
+             *delay(record.hi,d).conj()*delay(record.hi,e))
+        direct=lfilter(record.lpf,[1.],raw)[ex.DISCARD:ex.DISCARD+32]
+        np.testing.assert_allclose(ex.design(record,[key],32)[:,0],direct,rtol=1e-10,atol=1e-18)
+
     def test_ridge_primal_dual_equivalence(self):
         rng=np.random.default_rng(2);x=rng.normal(size=(8,12))+1j*rng.normal(size=(8,12));y=x[:,1]+.3j*x[:,4]
         rho=.01;h=ex.ridge(x,y,rho)

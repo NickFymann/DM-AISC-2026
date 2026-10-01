@@ -1,0 +1,117 @@
+{
+  "job": {
+    "repeat": 8,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": 20,
+    "method": "screen_sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": 0.8,
+    "validation_db": 21.15206523564272,
+    "build_fit_validation_sec": 0.20056313904933631,
+    "status": "ok",
+    "converged": true,
+    "iterations": 86,
+    "last_mu_relative_change": 4.166188978513497e-07,
+    "alpha": [
+      541.1961090244948,
+      29.321571524103316,
+      2.3831055719036023,
+      967001.7280287675,
+      7.037559527309263,
+      36.678698600993236,
+      31.033101230751367,
+      4.6918097892570225,
+      1.1770004941265053
+    ],
+    "active_local": [
+      3,
+      22,
+      25,
+      47,
+      65,
+      80,
+      108,
+      112,
+      113
+    ],
+    "fit_sec": 0.11353127309121192,
+    "screen_sec": 0.015585675137117505,
+    "n_full": 126,
+    "n_screen": 114,
+    "n_active": 9,
+    "score_min": 0.7214095705515449,
+    "score_max": 0.9843657801851576
+  },
+  "test_observed_db": 20.080424801623572,
+  "test_pim_only_db": 41.112841331142775,
+  "support": [
+    [
+      "c3",
+      0,
+      1,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      2
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      1,
+      4,
+      5
+    ],
+    [
+      "c3",
+      2,
+      3,
+      5
+    ],
+    [
+      "c3",
+      3,
+      3,
+      2
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 6.441177722066641,
+  "inference_median_sec": 0.005313450936228037,
+  "inference_us_per_sample": 1.7341550052963566,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 159404032,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

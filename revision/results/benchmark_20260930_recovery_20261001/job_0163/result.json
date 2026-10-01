@@ -1,0 +1,117 @@
+{
+  "job": {
+    "repeat": 2,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": 50,
+    "method": "sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": null,
+    "validation_db": 49.41284116400215,
+    "build_fit_validation_sec": 0.19982280512340367,
+    "status": "ok",
+    "converged": true,
+    "iterations": 532,
+    "last_mu_relative_change": 9.94823012947633e-07,
+    "alpha": [
+      1404.6411585119977,
+      218.7619141839393,
+      258.8798075835265,
+      5.120322728485347,
+      12.818627123763862,
+      813797.4303119092,
+      24.584482807380475,
+      6.38931908424248,
+      1.2982817953027135
+    ],
+    "active_local": [
+      5,
+      31,
+      32,
+      35,
+      113,
+      119,
+      120,
+      124,
+      125
+    ],
+    "fit_sec": 0.355609985999763,
+    "screen_sec": 0.029798018047586083,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 9,
+    "score_min": 0.64641847239858,
+    "score_max": 0.9897257081104932
+  },
+  "test_observed_db": 48.641542428882055,
+  "test_pim_only_db": 52.79465180184463,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      1
+    ],
+    [
+      "c3",
+      0,
+      5,
+      2
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      4,
+      4,
+      5
+    ],
+    [
+      "c3",
+      4,
+      5,
+      5
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 2.511443335097283,
+  "inference_median_sec": 0.006838190834969282,
+  "inference_us_per_sample": 2.231785520551332,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 158986240,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

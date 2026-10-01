@@ -1,0 +1,26 @@
+\begin{table*}[!t]
+\caption{Sequential resource measurements: one refit of the frozen selected model per method/case, repetition 0 at PNR 35 dB. Times exclude hyperparameter search. Inference is the median of seven warmed block evaluations, including active-feature construction and receiver filtering. Peak is the process high-water RSS.}
+\label{tab:resources}\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llrrrrrr}\toprule
+Source / dictionary & Method & $M$ & Active & Dictionary (s) & Fit (s) & Peak (MiB) & Inference ($\mu$s/sample)\\\midrule
+Cubic / cubic & Ridge-LS & 6 & 126 & 0.070 & 0.052 & 151.8 & 21.27\\
+ & SBL & 6 & 8 & 0.068 & 0.082 & 138.1 & 0.80\\
+ & Screen + ridge & 6 & 114 & 0.072 & 0.049 & 146.1 & 20.54\\
+ & Screen + SBL & 6 & 8 & 0.070 & 0.081 & 138.0 & 0.80\\
+ & Complex LASSO & 6 & 15 & 0.069 & 2.505 & 138.3 & 1.67\\
+ & Complex OMP & 6 & 20 & 0.071 & 0.080 & 138.0 & 2.17\\
+\midrule
+Tanh / cubic & Ridge-LS & 6 & 126 & 0.070 & 0.053 & 151.5 & 21.44\\
+ & SBL & 4 & 39 & 0.022 & 0.063 & 128.9 & 6.07\\
+ & Screen + ridge & 6 & 114 & 0.070 & 0.046 & 146.2 & 19.58\\
+ & Screen + SBL & 4 & 39 & 0.022 & 0.062 & 128.5 & 5.92\\
+ & Complex LASSO & 6 & 14 & 0.068 & 3.011 & 137.9 & 1.50\\
+ & Complex OMP & 6 & 10 & 0.070 & 0.043 & 138.1 & 1.02\\
+\midrule
+Tanh / cubic--quintic & Ridge-LS & 6 & 4788 & 2.642 & 15.646 & 1462.1 & 891.53\\
+ & SBL & 6 & 19 & 2.675 & 243.413 & 3439.4 & 2.11\\
+ & Screen + ridge & 6 & 2011 & 2.758 & 5.129 & 889.1 & 361.77\\
+ & Screen + SBL & 6 & 18 & 2.805 & 23.471 & 1124.7 & 1.98\\
+ & Complex LASSO & 6 & 33 & 2.940 & 109.578 & 1377.4 & 7.21\\
+ & Complex OMP & 6 & 20 & 2.750 & 1.882 & 1014.1 & 2.24\\
+\bottomrule\end{tabular}\end{table*}

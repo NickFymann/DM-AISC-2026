@@ -1,0 +1,102 @@
+{
+  "config": {
+    "purpose": "Independent validation-selected benchmark, preregistered grid before test generation",
+    "seed_base": 30261001,
+    "repeats": 10,
+    "samples_per_stage": 3064,
+    "memories": [
+      2,
+      4,
+      6
+    ],
+    "cases": [
+      {
+        "name": "cubic_c3",
+        "source": "cubic",
+        "quintic": false
+      },
+      {
+        "name": "tanh_c3",
+        "source": "tanh",
+        "quintic": false
+      },
+      {
+        "name": "tanh_c35",
+        "source": "tanh",
+        "quintic": true
+      }
+    ],
+    "pnr_db": [
+      null,
+      20,
+      35,
+      50
+    ],
+    "methods": [
+      "ridge",
+      "sbl",
+      "screen_ridge",
+      "screen_sbl",
+      "lasso",
+      "omp"
+    ],
+    "eta": [
+      0.01,
+      0.65,
+      0.8
+    ],
+    "grids": {
+      "ridge": [
+        1e-08,
+        1e-07,
+        1e-06,
+        1e-05,
+        0.0001,
+        0.001
+      ],
+      "sbl": [
+        100,
+        10000,
+        1000000
+      ],
+      "lasso": [
+        0.0001,
+        0.001,
+        0.01,
+        0.1
+      ],
+      "omp": [
+        5,
+        10,
+        20,
+        40
+      ]
+    },
+    "sbl_max_iter": 2000,
+    "memory_budget_gib": 10,
+    "inference_repeats": 5,
+    "task_timeout_sec": 3600,
+    "max_run_hours": 24,
+    "max_failed_jobs": 6
+  },
+  "source_sha256": {
+    "experiment.py": "789daf2bd81c251d7287d823dd3a20969b202c9767e215dbda521144c33be1cd",
+    "run_experiments.py": "3da5933a3474007f080004c58fe634bc51cb5212f22532f6b347821f55eb293a",
+    "summarize.py": "3cb792f3a488733545ec726abfb5ee79bf78f671a8adf2a3da9c57544e9b7942",
+    "launch_benchmark.py": "70518f651660ee8a3ee089ec5b21ae93b537a31a81f04d99bac1d9aa55e51a2b"
+  },
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "cpu": "",
+  "logical_cpus": 8,
+  "threads": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "status": "running",
+  "seed_rule": "tx=seed_base+1000*repeat+10*stage; noise=tx+500000; stage fit=0,val=1,test=2",
+  "protocol": "Independent records; first samples_per_stage observations after discard=4112; no refit after validation."
+}

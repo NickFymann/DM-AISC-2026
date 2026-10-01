@@ -1,0 +1,117 @@
+{
+  "job": {
+    "repeat": 4,
+    "case": {
+      "name": "cubic_c3",
+      "source": "cubic",
+      "quintic": false
+    },
+    "pnr": 35,
+    "method": "sbl"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 1000000,
+    "eta": null,
+    "validation_db": 34.16674062827086,
+    "build_fit_validation_sec": 0.5471850140020251,
+    "status": "ok",
+    "converged": true,
+    "iterations": 200,
+    "last_mu_relative_change": 9.855794413421674e-07,
+    "alpha": [
+      125.1738882008729,
+      732036.5493280656,
+      8.621789257532907,
+      14.057404835404595,
+      255.01187972816575,
+      19.859531455938114,
+      7.263873700195272,
+      9.834028779424077,
+      1.4340988652631472
+    ],
+    "active_local": [
+      30,
+      31,
+      34,
+      35,
+      41,
+      114,
+      118,
+      124,
+      125
+    ],
+    "fit_sec": 0.17924451897852123,
+    "screen_sec": 0.025520270923152566,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 9,
+    "score_min": 0.6826127278546585,
+    "score_max": 0.9888583552094927
+  },
+  "test_observed_db": 35.18719501125577,
+  "test_pim_only_db": 52.28421267480054,
+  "support": [
+    [
+      "c3",
+      0,
+      5,
+      0
+    ],
+    [
+      "c3",
+      0,
+      5,
+      1
+    ],
+    [
+      "c3",
+      0,
+      5,
+      4
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      1,
+      1,
+      5
+    ],
+    [
+      "c3",
+      4,
+      5,
+      0
+    ],
+    [
+      "c3",
+      4,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      4
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 2.840869303094223,
+  "inference_median_sec": 0.005116428015753627,
+  "inference_us_per_sample": 1.6698524855592778,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 158679040,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

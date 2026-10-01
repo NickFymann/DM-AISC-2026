@@ -1,0 +1,70 @@
+{
+  "job": {
+    "repeat": 2,
+    "case": {
+      "name": "tanh_c3",
+      "source": "tanh",
+      "quintic": false
+    },
+    "pnr": 20,
+    "method": "omp"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 5,
+    "eta": null,
+    "validation_db": 20.02065636971848,
+    "build_fit_validation_sec": 0.3204556158743799,
+    "status": "ok",
+    "converged": true,
+    "iterations": 5,
+    "fit_sec": 0.06475855503231287,
+    "screen_sec": 0.018614816013723612,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 5,
+    "score_min": 0.6433014852233264,
+    "score_max": 0.9832348035091151
+  },
+  "test_observed_db": 18.741970562433103,
+  "test_pim_only_db": 22.949050226733647,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      0
+    ],
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ]
+  ],
+  "tuning_sec": 2.465079416986555,
+  "inference_median_sec": 0.004850764060392976,
+  "inference_us_per_sample": 1.5831475392927468,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 159858688,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}

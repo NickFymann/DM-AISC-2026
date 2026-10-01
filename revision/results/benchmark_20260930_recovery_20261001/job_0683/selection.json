@@ -1,0 +1,36 @@
+{
+  "job": {
+    "repeat": 9,
+    "case": {
+      "name": "tanh_c3",
+      "source": "tanh",
+      "quintic": false
+    },
+    "pnr": 20,
+    "method": "omp"
+  },
+  "chosen": {
+    "memory": 6,
+    "parameter": 10,
+    "eta": null,
+    "validation_db": 18.32829449077885,
+    "build_fit_validation_sec": 0.48400771990418434,
+    "status": "ok",
+    "converged": true,
+    "iterations": 10,
+    "fit_sec": 0.12304396810941398,
+    "screen_sec": 0.06626123399473727,
+    "n_full": 126,
+    "n_screen": 126,
+    "n_active": 10,
+    "score_min": 0.6999438944356416,
+    "score_max": 0.9844432789603743
+  },
+  "fit_samples": 3064,
+  "validation_samples": 3064,
+  "test_samples": 3064,
+  "stage_absolute_slice": [
+    4112,
+    7176
+  ]
+}

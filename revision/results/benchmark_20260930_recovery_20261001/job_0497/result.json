@@ -1,0 +1,188 @@
+{
+  "job": {
+    "repeat": 6,
+    "case": {
+      "name": "tanh_c35",
+      "source": "tanh",
+      "quintic": true
+    },
+    "pnr": 35,
+    "method": "omp"
+  },
+  "selected": {
+    "memory": 6,
+    "parameter": 20,
+    "eta": null,
+    "validation_db": 28.341401727323365,
+    "build_fit_validation_sec": 8.455321832094342,
+    "status": "ok",
+    "converged": true,
+    "iterations": 20,
+    "fit_sec": 9.704123612027615,
+    "screen_sec": 2.602100345073268,
+    "n_full": 4788,
+    "n_screen": 4788,
+    "n_active": 20,
+    "score_min": 0.5920567560500609,
+    "score_max": 0.9910809316703876
+  },
+  "test_observed_db": 27.92079252691572,
+  "test_pim_only_db": 29.023997176236467,
+  "support": [
+    [
+      "c3",
+      0,
+      0,
+      0
+    ],
+    [
+      "c3",
+      0,
+      0,
+      5
+    ],
+    [
+      "c3",
+      0,
+      5,
+      0
+    ],
+    [
+      "c3",
+      0,
+      5,
+      5
+    ],
+    [
+      "c3",
+      5,
+      5,
+      0
+    ],
+    [
+      "c3",
+      5,
+      5,
+      5
+    ],
+    [
+      "q5a",
+      0,
+      0,
+      0,
+      0,
+      3
+    ],
+    [
+      "q5a",
+      0,
+      0,
+      0,
+      5,
+      0
+    ],
+    [
+      "q5a",
+      0,
+      5,
+      5,
+      5,
+      2
+    ],
+    [
+      "q5a",
+      1,
+      2,
+      2,
+      5,
+      5
+    ],
+    [
+      "q5a",
+      4,
+      5,
+      5,
+      0,
+      5
+    ],
+    [
+      "q5a",
+      5,
+      5,
+      5,
+      0,
+      0
+    ],
+    [
+      "q5a",
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    [
+      "q5b",
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "q5b",
+      0,
+      0,
+      0,
+      5,
+      5
+    ],
+    [
+      "q5b",
+      0,
+      0,
+      5,
+      1,
+      1
+    ],
+    [
+      "q5b",
+      0,
+      5,
+      0,
+      0,
+      0
+    ],
+    [
+      "q5b",
+      2,
+      5,
+      5,
+      5,
+      5
+    ],
+    [
+      "q5b",
+      5,
+      5,
+      0,
+      5,
+      5
+    ],
+    [
+      "q5b",
+      5,
+      5,
+      5,
+      0,
+      0
+    ]
+  ],
+  "tuning_sec": 55.11138107115403,
+  "inference_median_sec": 0.01225607912056148,
+  "inference_us_per_sample": 4.000025822637559,
+  "inference_repeats": 5,
+  "status": "ok",
+  "workflow_peak_rss_bytes": 1293934592,
+  "peak_scope": "isolated complete method workflow, including validation search and inference; RSS sampled every 10 ms"
+}
